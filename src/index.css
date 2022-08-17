@@ -1,13 +1,35 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Fonts */
+
+@font-face {
+	font-family: 'Berlin';
+	font-style: normal;
+	font-weight: normal;
+	src: url('fonts/Reef.otf');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+	font-family: 'Berlin';
+	font-style: normal;
+	font-weight: bold;
+	src: url('fonts/Reef.otf');
+}
+
+@font-face {
+	font-family: 'Fontnia Ineth';
+	font-style: normal;
+	font-weight: normal;
+	src: url('fonts/fontnya-ineth.ttf');
+}
+
+/* Main Components */
+
+* {
+	box-sizing: border-box;
+	font-family: 'Berlin';
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: #753fbe;
 }

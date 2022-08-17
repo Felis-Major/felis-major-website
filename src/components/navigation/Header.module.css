@@ -1,0 +1,41 @@
+:root {
+	--headerBackgroundColor: #121212;
+}
+
+/* Containers */
+
+.header {
+	background-color: var(--headerBackgroundColor);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav {
+	padding: 5px;
+	flex: 1;
+	display: flex;
+	align-items: center;
+}
+
+/* Logo */
+
+.logo-container {
+	flex-basis: 200px;
+	text-align: center;
+}
+
+/* Page Links */
+
+.nav-links {
+	flex: 1;
+	list-style: none;
+	display: flex;
+}
+
+/* Social Links */
+
+.socials-container {
+	display: flex;
+	justify-content: space-between;
+}

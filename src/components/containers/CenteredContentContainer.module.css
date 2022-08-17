@@ -1,0 +1,14 @@
+.centered-content-container {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.centered-content-container-row {
+	flex-direction: row;
+}
+
+.centered-content-container-column {
+	flex-direction: column;
+}

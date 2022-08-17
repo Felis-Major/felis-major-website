@@ -1,0 +1,17 @@
+:root {
+	--textArea-hoverBackgroundColor: #ad96f1;
+	--textArea-hoverColor: #ffffff;
+	--textArea-normalBackgroundColor: #9b86db;
+	--textArea-normalColor: #ffffff;
+}
+
+.text-area {
+	background-color: var(--textArea-normalBackgroundColor);
+	color: var(--textArea-normalColor);
+	height: 250px;
+}
+
+.text-area:hover {
+	background-color: var(--textArea-hoverBackgroundColor);
+	color: var(--textfield-hoverColor);
+}

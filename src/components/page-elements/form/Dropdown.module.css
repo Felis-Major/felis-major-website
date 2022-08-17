@@ -1,0 +1,16 @@
+:root {
+	--dropdown-hoverBackgroundColor: #ad96f1;
+	--dropdown-hoverColor: #ffffff;
+	--dropdown-normalBackgroundColor: #9b86db;
+	--dropdown-normalColor: #ffffff;
+}
+
+.dropdown {
+	background-color: var(--dropdown-normalBackgroundColor);
+	color: var(--dropdown-normalColor);
+}
+
+.dropdown:hover {
+	background-color: var(--dropdown-hoverBackgroundColor);
+	color: var(--dropdown-hoverColor);
+}

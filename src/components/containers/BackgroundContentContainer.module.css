@@ -1,0 +1,15 @@
+.background-content-container {
+	background-color: #753fbe;
+}
+
+.background-content-container__small {
+	height: 100px;
+}
+
+.background-content-container__medium {
+	height: 250px;
+}
+
+.background-content-container__large {
+	height: 400px;
+}

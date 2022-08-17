@@ -1,0 +1,12 @@
+.links-buttons {
+	width: 100%;
+	max-width: 500px;
+}
+
+.links-steam-button {
+	background-color: #000;
+}
+
+.links-steam-button:hover {
+	background-color: #161616;
+}

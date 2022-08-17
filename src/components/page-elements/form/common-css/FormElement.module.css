@@ -1,0 +1,9 @@
+.form-element {
+	border-radius: 10px;
+	border: none;
+	display: block;
+	font-size: 24px;
+	margin: 10px 0px;
+	outline: none;
+	padding: 15px 40px;
+}

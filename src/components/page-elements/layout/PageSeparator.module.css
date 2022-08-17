@@ -1,0 +1,26 @@
+.page-separator {
+	/* Colors */
+	background-color: #121212;
+	color: #ffffff;
+
+	/* Layout */
+	padding: 25px;
+}
+
+.page-separator__title {
+	/* Colors */
+	color: #c170cf;
+
+	/* Text */
+	font-size: 60px;
+	text-transform: uppercase;
+	font-family: 'Fontnia Ineth';
+}
+
+.page-separator__sub-title {
+	/* Text */
+	font-size: 30px;
+
+	/* Layout */
+	margin-left: 20px;
+}
