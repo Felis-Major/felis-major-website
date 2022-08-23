@@ -6,20 +6,9 @@ const localizationKeys = {
 	navPress: 'nav_press',
 	navContactUs: 'nav_contactUs',
 
-	// Page Titles
+	// 'About Us' Page
 	pageTitleAboutUs: 'pageTitle_aboutUs',
 	pageSubtitleAboutUs: 'pageSubtitle_aboutUs',
-	pageTitleServices: 'pageTitle_services',
-	pageSubtitleServices: 'pageSubtitle_services',
-	pageTitleClients: 'pageTitle_clients',
-	pageTitleWastern: 'pageTitle_wastern',
-	pageSubtitleWastern: 'pageSubtitle_wastern',
-	pageTitlePress: 'pageTitle_press',
-	pageSubtitlePress: 'pageSubtitle_press',
-	pageTitleContactUs: 'pageTitle_contactUs',
-	pageSubtitleContactUs: 'pageSubtitle_contactUs',
-
-	// 'About Us' Page
 	pageSectionTeam: 'pageSection_team',
 	pageSectionValues: 'pageSection_values',
 	pageSectionTwitterFeed: 'pageSection_twitterFeed',
@@ -29,6 +18,9 @@ const localizationKeys = {
 	pageTeamCardCEO: 'pageTeamCard_ceo',
 
 	// 'Our Services' Page
+	pageTitleServices: 'pageTitle_services',
+	pageSubtitleServices: 'pageSubtitle_services',
+	pageTitleClients: 'pageTitle_clients',
 	pageTeamCardDesign: 'pageTeamCard_design',
 	pageTeamCardDesignDescription: 'pageTeamCard_designDescription',
 	pageTeamCardDesignList1: 'pageTeamCard_designList1',
@@ -44,6 +36,27 @@ const localizationKeys = {
 	pageTeamCardMarketingList1: 'pageTeamCard_marketingList1',
 	pageTeamCardMarketingList2: 'pageTeamCard_marketingList2',
 	pageTeamCardMarketingList3: 'pageTeamCard_marketingList3',
+
+	// 'Wastern' Page
+	pageTitleWastern: 'pageTitle_wastern',
+	pageSubtitleWastern: 'pageSubtitle_wastern',
+
+	// 'Press' Page
+	pageTitlePress: 'pageTitle_press',
+	pageSubtitlePress: 'pageSubtitle_press',
+
+	// 'Contact Us' Page
+	pageTitleContactUs: 'pageTitle_contactUs',
+	pageSubtitleContactUs: 'pageSubtitle_contactUs',
+	pageFormButtonTo: 'pageFormButton_to',
+	pageFormPlaceholderEnterEmail: 'pageFormPlaceholder_enterEmail',
+	pageFormDropdownRequestServices: 'pageFormDropdown_requestServices',
+	pageFormDropdownPress: 'pageFormDropdown_press',
+	pageFormDropdownInfluencers: 'pageFormDropdown_influencers',
+	pageFormDropdownPartnership: 'pageFormDropdown_partnership',
+	pageFormDropdownOther: 'pageFormDropdown_other',
+	pageFormPlaceholderLeaveMessage: 'pageFormPlaceholder_leaveMessage',
+	pageFormButtonSendMessage: 'pageFormButton_sendMessage',
 };
 
 export default localizationKeys;

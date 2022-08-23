@@ -2,6 +2,9 @@
 import { useTranslation } from 'react-i18next';
 import localizationKeys from '../localization/localization-keys';
 
+// Import styles
+import servicePageStyle from './ServicePage.module.css';
+
 // Import components
 import Header from '../components/navigation/Header';
 import Footer from '../components/navigation/Footer';
@@ -35,7 +38,7 @@ function ServicesPage() {
 		<>
 			<Header />
 			<PageHeader
-				imageUrl=''
+				imageUrl='https://via.placeholder.com/2000x400'
 				title={t(localizationKeys.pageTitleServices)}
 				subtitle={t(localizationKeys.pageSubtitleServices)}
 			/>
@@ -43,21 +46,21 @@ function ServicesPage() {
 			<PresetBackgroundContentContainer background='dots'>
 				<CenteredContentContainer>
 					<ServiceCard
-						imageUrl=''
+						imageUrl='https://via.placeholder.com/250x70'
 						title={t(localizationKeys.pageTeamCardDesign)}
 						description={t(localizationKeys.pageTeamCardDesignDescription)}
 						separator='⭐'
 						services={designCardArray}
 					/>
 					<ServiceCard
-						imageUrl=''
+						imageUrl='https://via.placeholder.com/250x70'
 						title={t(localizationKeys.pageTeamCardProgramming)}
 						description={t(localizationKeys.pageTeamCardProgrammingDescription)}
 						separator='⭐'
 						services={programmingCardArray}
 					/>
 					<ServiceCard
-						imageUrl=''
+						imageUrl='https://via.placeholder.com/250x70'
 						title={t(localizationKeys.pageTeamCardMarketing)}
 						description={t(localizationKeys.pageTeamCardMarketingDescription)}
 						separator='⭐'
@@ -76,16 +79,16 @@ function ServicesPage() {
 			<BackgroundContentContainer>
 				<CenteredContentContainer>
 					<img
-						height='50'
-						src='https://jtech.ampittec.com/wp-content/uploads/2019/04/logo_scalian-1-1-300x35.png'
+						className={servicePageStyle['client-logo']}
+						src='https://via.placeholder.com/450x100'
 					/>
 					<img
-						height='50'
-						src='https://www.cae.com/assets/images/cae-logos/new-cae-white.png'
+						className={servicePageStyle['client-logo']}
+						src='https://via.placeholder.com/450x100'
 					/>
 					<img
-						height='50'
-						src='https://i2.wp.com/www.verifiedmom.com/wp-content/uploads/2014/07/Netflix_Logo_Print_OneColorPMS.png?fit=8685%2C2333&ssl=1'
+						className={servicePageStyle['client-logo']}
+						src='https://via.placeholder.com/450x100'
 					/>
 				</CenteredContentContainer>
 			</BackgroundContentContainer>

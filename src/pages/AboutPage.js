@@ -20,7 +20,7 @@ function AboutPage() {
 		<>
 			<Header />
 			<PageHeader
-				imageUrl=''
+				imageUrl='https://via.placeholder.com/2000x400'
 				title={t(localizationKeys.pageTitleAboutUs)}
 				subtitle={t(localizationKeys.pageSubtitleAboutUs)}
 			/>
@@ -29,13 +29,13 @@ function AboutPage() {
 				<PageSection title={t(localizationKeys.pageSectionTeam)}>
 					<CenteredContentContainer>
 						<TeamCard
-							src='https://pbs.twimg.com/profile_images/1553468173436977152/YkUybhHy_400x400.jpg'
+							src='https://via.placeholder.com/400'
 							name='Suzanne Clemente'
 							jobTitle={t(localizationKeys.pageTeamCardCEO)}
 							twitterProfile='suzclemente'
 						/>
 						<TeamCard
-							src='https://pbs.twimg.com/profile_images/1484651670231470085/4WbLEKMW_400x400.jpg'
+							src='https://via.placeholder.com/400'
 							name='Robert Edilber'
 							jobTitle={t(localizationKeys.pageTeamCardCEO)}
 							twitterProfile='rsedilber'

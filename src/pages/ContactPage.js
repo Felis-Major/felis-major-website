@@ -15,6 +15,7 @@ import Footer from '../components/navigation/Footer';
 // Import styles
 import contactPageStyle from './ContactPage.module.css';
 import ButtonURL from '../components/page-elements/form/buttons/actions/ButtonURL';
+import localizationKeys from '../localization/localization-keys';
 
 function ContactPage() {
 	const { t } = useTranslation();
@@ -23,9 +24,9 @@ function ContactPage() {
 		<>
 			<Header />
 			<PageHeader
-				imageUrl='https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg'
-				title={t('pageTitle_ContactUs')}
-				subTitles={['Leave us a message']}
+				imageUrl='https://via.placeholder.com/2000x400'
+				title={t(localizationKeys.pageTitleContactUs)}
+				subtitle={t(localizationKeys.pageSubtitleContactUs)}
 			/>
 
 			<ContentContainer>
@@ -34,28 +35,43 @@ function ContactPage() {
 						className={contactPageStyle['contact-form-element']}
 						url='mailto:contact@felismajor.com'
 					>
-						to: contact@felismajor.com
+						{t(localizationKeys.pageFormButtonTo)}: contact@felismajor.com
 					</ButtonURL>
 					<TextField
 						className={contactPageStyle['contact-form-element']}
-						placeholder='Enter your email'
+						placeholder={t(localizationKeys.pageFormPlaceholderEnterEmail)}
 					/>
 					<Dropdown
 						className={contactPageStyle['contact-form-element']}
 						options={[
-							{ value: 'services', text: 'Request Our services' },
-							{ value: 'press', text: 'Press' },
-							{ value: 'influencers', text: 'Streamers/Influencers' },
-							{ value: 'partnership', text: 'Partnership' },
-							{ value: 'other', text: 'Other...' },
+							{
+								value: 'services',
+								text: t(localizationKeys.pageFormDropdownRequestServices),
+							},
+							{
+								value: 'press',
+								text: t(localizationKeys.pageFormDropdownPress),
+							},
+							{
+								value: 'influencers',
+								text: t(localizationKeys.pageFormDropdownInfluencers),
+							},
+							{
+								value: 'partnership',
+								text: t(localizationKeys.pageFormDropdownPartnership),
+							},
+							{
+								value: 'other',
+								text: t(localizationKeys.pageFormDropdownOther),
+							},
 						]}
 					/>
 					<TextArea
 						className={contactPageStyle['contact-form-element']}
-						placeholder='Leave us a message...'
+						placeholder={t(localizationKeys.pageFormPlaceholderLeaveMessage)}
 					/>
 					<Button className={contactPageStyle['contact-form-submit']}>
-						✨ Send Message ✨
+						✨ {t(localizationKeys.pageFormButtonSendMessage)} ✨
 					</Button>
 				</CenteredContentContainer>
 			</ContentContainer>
