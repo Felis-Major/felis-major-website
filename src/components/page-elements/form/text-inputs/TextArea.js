@@ -1,10 +1,10 @@
 // Import styles
-import formElementStyle from './common-css/FormElement.module.css';
-import textInputStyle from './common-css/TextInput.module.css';
+import formElementStyle from '../FormElement.module.css';
+import textInputStyle from './TextInput.module.css';
 import textAreaStyle from './TextArea.module.css';
 
 // Import helpers
-import appendClassName from '../../../helpers/append-class-name';
+import appendClassName from '../../../../helpers/append-class-name';
 
 function TextArea(props) {
 	const baseClasses = `${formElementStyle['form-element']} ${textInputStyle['text-input']} ${textAreaStyle['text-area']}`;

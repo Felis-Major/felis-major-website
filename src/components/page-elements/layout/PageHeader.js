@@ -5,7 +5,7 @@ function PageHeader(props) {
 	return (
 		<>
 			<ImageBlock height='large' url={props.imageUrl} />
-			<PageSeparator title={props.title} subTitles={props.subTitles}>
+			<PageSeparator title={props.title} subtitle={props.subtitle}>
 				{props.children}
 			</PageSeparator>
 		</>

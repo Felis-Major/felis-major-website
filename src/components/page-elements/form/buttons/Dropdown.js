@@ -1,9 +1,9 @@
 // Import styles
-import formElementStyle from './common-css/FormElement.module.css';
+import formElementStyle from '../FormElement.module.css';
 import dropdownStyle from './Dropdown.module.css';
 
 // Import helpers
-import appendClassName from '../../../helpers/append-class-name';
+import appendClassName from '../../../../helpers/append-class-name';
 
 function Dropdown(props) {
 	const baseClasses = `${formElementStyle['form-element']} ${dropdownStyle['dropdown']}`;

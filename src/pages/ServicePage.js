@@ -1,68 +1,77 @@
-import Button from '../components/page-elements/form/Button';
+// Import localization package
+import { useTranslation } from 'react-i18next';
+import localizationKeys from '../localization/localization-keys';
+
+// Import components
+import Header from '../components/navigation/Header';
+import Footer from '../components/navigation/Footer';
 import BackgroundContentContainer from '../components/containers/BackgroundContentContainer';
 import PageHeader from '../components/page-elements/layout/PageHeader';
 import PageSeparator from '../components/page-elements/layout/PageSeparator';
-import PageTitle from '../components/page-elements/text/PageTitle';
 import ServiceCard from '../components/page-elements/cards/ServiceCard';
 import CenteredContentContainer from '../components/containers/CenteredContentContainer';
 import PresetBackgroundContentContainer from '../components/containers/Backgrounds/PresetBackgroundContentContainer';
-import Header from '../components/navigation/Header';
-import Footer from '../components/navigation/Footer';
+import ButtonPage from '../components/page-elements/form/buttons/actions/ButtonPage';
 
 function ServicesPage() {
+	const { t } = useTranslation();
+
+	let designCardArray = [];
+	designCardArray.push(t(localizationKeys.pageTeamCardDesignList1));
+	designCardArray.push(t(localizationKeys.pageTeamCardDesignList2));
+	designCardArray.push(t(localizationKeys.pageTeamCardDesignList3));
+
+	let programmingCardArray = [];
+	programmingCardArray.push(t(localizationKeys.pageTeamCardProgrammingList1));
+	programmingCardArray.push(t(localizationKeys.pageTeamCardProgrammingList2));
+	programmingCardArray.push(t(localizationKeys.pageTeamCardProgrammingList3));
+
+	let marketingCardArray = [];
+	marketingCardArray.push(t(localizationKeys.pageTeamCardMarketingList1));
+	marketingCardArray.push(t(localizationKeys.pageTeamCardMarketingList2));
+	marketingCardArray.push(t(localizationKeys.pageTeamCardMarketingList3));
+
 	return (
 		<>
 			<Header />
 			<PageHeader
-				imageUrl='https://1.bp.blogspot.com/-I3pzlkitwQA/Uxiqls0cb8I/AAAAAAAALbc/q93rRcXzYp4/s1600/wallpaper_51.jpg'
-				title='Our Services'
-				subTitles={[
-					'Contrats a partir de blabla',
-					'Voila tous nos services choses',
-				]}
+				imageUrl=''
+				title={t(localizationKeys.pageTitleServices)}
+				subtitle={t(localizationKeys.pageSubtitleServices)}
 			/>
 
 			<PresetBackgroundContentContainer background='dots'>
 				<CenteredContentContainer>
 					<ServiceCard
-						imageUrl='http://images6.fanpop.com/image/photos/40500000/Cat-cats-40547181-1680-1050.jpg'
-						title='Design'
-						description='description...'
+						imageUrl=''
+						title={t(localizationKeys.pageTeamCardDesign)}
+						description={t(localizationKeys.pageTeamCardDesignDescription)}
 						separator='⭐'
-						services={[
-							'Game Design & Narration Consulting',
-							'Serious Games & Virtual Museums',
-							'Training & Conferences',
-						]}
+						services={designCardArray}
 					/>
 					<ServiceCard
-						imageUrl='https://petsreporter.com/wp-content/uploads/2020/11/Weird-Cat-Behaviors-Explained-3-1536x1152.jpg'
-						title='Programming'
-						description='description...'
+						imageUrl=''
+						title={t(localizationKeys.pageTeamCardProgramming)}
+						description={t(localizationKeys.pageTeamCardProgrammingDescription)}
 						separator='⭐'
-						services={['Webdesign', 'Unity Project Consulting', 'Training']}
+						services={programmingCardArray}
 					/>
 					<ServiceCard
-						imageUrl='https://images2.fanpop.com/image/photos/13400000/Cat-cats-13494211-1600-1067.jpg'
-						title='Comms & Marketing'
-						description='description...'
+						imageUrl=''
+						title={t(localizationKeys.pageTeamCardMarketing)}
+						description={t(localizationKeys.pageTeamCardMarketingDescription)}
 						separator='⭐'
-						services={[
-							'Communications Strategy',
-							'Web Content Creation',
-							'Training & Conferences',
-						]}
+						services={marketingCardArray}
 					/>
 				</CenteredContentContainer>
 				<CenteredContentContainer>
-					<Button>📫 Contact Us</Button>
+					<ButtonPage to='/contact'>
+						📫 {t(localizationKeys.pageTitleContactUs)}
+					</ButtonPage>
 				</CenteredContentContainer>
 			</PresetBackgroundContentContainer>
 
-			<PageSeparator
-				title='Our Clients'
-				subTitles={['Current & Past clients']}
-			/>
+			<PageSeparator title={t(localizationKeys.pageTitleClients)} />
 
 			<BackgroundContentContainer>
 				<CenteredContentContainer>

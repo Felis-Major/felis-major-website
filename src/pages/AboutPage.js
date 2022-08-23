@@ -1,14 +1,17 @@
 // Import localization package
 import { useTranslation } from 'react-i18next';
+import localizationKeys from '../localization/localization-keys';
 
 // Import components
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
 import BackgroundContentContainer from '../components/containers/BackgroundContentContainer';
 import CenteredContentContainer from '../components/containers/CenteredContentContainer';
 import PageHeader from '../components/page-elements/layout/PageHeader';
-import PageTitle from '../components/page-elements/text/PageTitle';
 import TeamCard from '../components/page-elements/cards/TeamCard';
 import Header from '../components/navigation/Header';
 import Footer from '../components/navigation/Footer';
+import PageText from '../components/page-elements/text/PageText';
+import PageSection from '../components/page-elements/layout/PageSection';
 
 function AboutPage() {
 	const { t } = useTranslation();
@@ -17,31 +20,48 @@ function AboutPage() {
 		<>
 			<Header />
 			<PageHeader
-				imageUrl='https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg'
-				title={t('pageTitle_AboutUs')}
-				subTitles={['Blabla who we are']}
+				imageUrl=''
+				title={t(localizationKeys.pageTitleAboutUs)}
+				subtitle={t(localizationKeys.pageSubtitleAboutUs)}
 			/>
 
 			<BackgroundContentContainer>
-				<PageTitle>Team</PageTitle>
-				<CenteredContentContainer>
-					<TeamCard
-						src='https://pbs.twimg.com/profile_images/1553468173436977152/YkUybhHy_400x400.jpg'
-						name='Suzanne Clemente'
-						jobTitle='CEO'
-						twitterProfile='suzclemente'
-					/>
-					<TeamCard
-						src='https://pbs.twimg.com/profile_images/1484651670231470085/4WbLEKMW_400x400.jpg'
-						name='Robert Edilber'
-						jobTitle='CEO'
-						twitterProfile='rsedilber'
-					/>
-				</CenteredContentContainer>
+				<PageSection title={t(localizationKeys.pageSectionTeam)}>
+					<CenteredContentContainer>
+						<TeamCard
+							src='https://pbs.twimg.com/profile_images/1553468173436977152/YkUybhHy_400x400.jpg'
+							name='Suzanne Clemente'
+							jobTitle={t(localizationKeys.pageTeamCardCEO)}
+							twitterProfile='suzclemente'
+						/>
+						<TeamCard
+							src='https://pbs.twimg.com/profile_images/1484651670231470085/4WbLEKMW_400x400.jpg'
+							name='Robert Edilber'
+							jobTitle={t(localizationKeys.pageTeamCardCEO)}
+							twitterProfile='rsedilber'
+						/>
+					</CenteredContentContainer>
+				</PageSection>
 
-				<PageTitle>Values</PageTitle>
-				<PageTitle>Twitter Feed</PageTitle>
-				<PageTitle>Sponsors</PageTitle>
+				<PageSection title={t(localizationKeys.pageSectionValues)}>
+					<PageText>
+						{t(localizationKeys.pageTextValues)}
+						<ul>
+							<li>{t(localizationKeys.pageTextValuesList1)}</li>
+							<li>{t(localizationKeys.pageTextValuesList2)}</li>
+						</ul>
+					</PageText>
+				</PageSection>
+
+				<PageSection title={t(localizationKeys.pageSectionTwitterFeed)}>
+					<TwitterTimelineEmbed
+						tweetLimit='2'
+						sourceType='profile'
+						screenName='felismajorrr'
+						options={{ width: 700 }}
+						theme='dark'
+					/>
+				</PageSection>
 			</BackgroundContentContainer>
 			<Footer />
 		</>

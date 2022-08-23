@@ -1,5 +1,5 @@
 // Import CSS Module
-import style from './Footer.module.css';
+import footerStyle from './Footer.module.css';
 
 // Default imports
 import NavLink from './elements/NavLink';
@@ -7,7 +7,7 @@ import NavLink from './elements/NavLink';
 // Import localization package
 import i18n from '../../localization/i18n';
 import { useTranslation } from 'react-i18next';
-import Dropdown from '../page-elements/form/Dropdown';
+import Dropdown from '../page-elements/form/buttons/Dropdown';
 
 function Header() {
 	const { t } = useTranslation();
@@ -17,9 +17,9 @@ function Header() {
 	}
 
 	return (
-		<footer className={style['footer']}>
-			<nav className={style['nav']}>
-				<ul className={style['nav-links']}>
+		<footer className={footerStyle['footer']}>
+			<nav className={footerStyle['nav']}>
+				<ul className={footerStyle['nav-links']}>
 					<NavLink size='small' target='/about'>
 						{t('nav_AboutUs')}
 					</NavLink>
@@ -38,7 +38,7 @@ function Header() {
 				</ul>
 			</nav>
 			<Dropdown
-				className={style['footer-dropdown']}
+				className={footerStyle['footer-dropdown']}
 				onChange={changeLocale}
 				options={[
 					{ value: 'en', text: 'EN' },

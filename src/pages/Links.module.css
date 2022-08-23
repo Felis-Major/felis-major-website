@@ -10,3 +10,11 @@
 .links-steam-button:hover {
 	background-color: #161616;
 }
+
+.social-links-container {
+	width: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 20px 0px;
+}

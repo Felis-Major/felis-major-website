@@ -28,7 +28,7 @@
 }
 
 .footer-dropdown {
-	padding: 5px;
-	margin-right: 20px;
-	width: 100px;
+	width: 100px !important;
+	padding: 5px !important;
+	margin-right: 15px !important;
 }

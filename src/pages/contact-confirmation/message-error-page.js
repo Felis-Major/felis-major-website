@@ -2,7 +2,7 @@
 import { useTranslation } from 'react-i18next';
 
 // Import components
-import Button from '../../components/page-elements/form/Button';
+import Button from '../../components/page-elements/form/buttons/Button';
 import CenteredContentContainer from '../../components/containers/CenteredContentContainer';
 import ContentContainer from '../../components/containers/ContentContainer';
 import PageHeader from '../../components/page-elements/layout/PageHeader';

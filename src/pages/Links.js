@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 // Import components
 import CenteredContentContainer from '../components/containers/CenteredContentContainer';
 import ContentContainer from '../components/containers/ContentContainer';
-import Button from '../components/page-elements/form/Button';
+import Button from '../components/page-elements/form/buttons/Button';
 import BackgroundContentContainer from '../components/containers/BackgroundContentContainer';
 import ImageLink from '../components/navigation/elements/ImageLink';
 
@@ -33,7 +33,7 @@ function ContactPage() {
 
 			<ContentContainer>
 				<CenteredContentContainer direction='column'>
-					<div style={{ width: '500px' }}>
+					<div className={linksPageStyle['social-links-container']}>
 						<ImageLink
 							link='#'
 							size='48'

@@ -4,16 +4,17 @@ import { useTranslation } from 'react-i18next';
 // Import components
 import CenteredContentContainer from '../components/containers/CenteredContentContainer';
 import PageHeader from '../components/page-elements/layout/PageHeader';
-import TextField from '../components/page-elements/form/TextField';
+import TextField from '../components/page-elements/form/text-inputs/TextField';
 import ContentContainer from '../components/containers/ContentContainer';
-import TextArea from '../components/page-elements/form/TextArea';
-import Button from '../components/page-elements/form/Button';
-import Dropdown from '../components/page-elements/form/Dropdown';
+import TextArea from '../components/page-elements/form/text-inputs/TextArea';
+import Button from '../components/page-elements/form/buttons/Button';
+import Dropdown from '../components/page-elements/form/buttons/Dropdown';
 import Header from '../components/navigation/Header';
 import Footer from '../components/navigation/Footer';
 
 // Import styles
 import contactPageStyle from './ContactPage.module.css';
+import ButtonURL from '../components/page-elements/form/buttons/actions/ButtonURL';
 
 function ContactPage() {
 	const { t } = useTranslation();
@@ -29,9 +30,12 @@ function ContactPage() {
 
 			<ContentContainer>
 				<CenteredContentContainer direction='column'>
-					<Button className={contactPageStyle['contact-form-element']}>
+					<ButtonURL
+						className={contactPageStyle['contact-form-element']}
+						url='mailto:contact@felismajor.com'
+					>
 						to: contact@felismajor.com
-					</Button>
+					</ButtonURL>
 					<TextField
 						className={contactPageStyle['contact-form-element']}
 						placeholder='Enter your email'
