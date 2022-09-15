@@ -2,20 +2,18 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-// Components
-import Header from './components/navigation/Header';
-import Footer from './components/navigation/Footer';
+// Import main pages
+import AboutPage from './pages/main-pages/about-page/AboutPage';
+import ServicesPage from './pages/main-pages/services-page/ServicesPage';
+import WasternPage from './pages/main-pages/wastern-page/WasternPage';
+import ContactPage from './pages/main-pages/contact-page/ContactPage';
 
-// Pages
-import AboutPage from './pages/AboutPage';
-import ContactPage from './pages/ContactPage';
-import PressPage from './pages/PressPage';
-import ServicesPage from './pages/ServicePage';
-import WasternPage from './pages/WasternPage';
-import MessageSentPage from './pages/contact-confirmation/message-sent-page';
-import MessageErrorPage from './pages/contact-confirmation/message-error-page';
-import Links from './pages/Links';
+// Import special pages
+import MessageSentPage from './pages/special-pages/contact-confirmation/MessageSentPage';
+import MessageErrorPage from './pages/special-pages/contact-confirmation/MessageErrorPage';
+import LinksPage from './pages/special-pages/links-page/LinksPage';
 
+// Import localization
 import './localization/i18n';
 
 function App() {
@@ -23,17 +21,21 @@ function App() {
 		<>
 			<Routes>
 				{/* Define the default route */}
-				<Route path='/' element={<ServicesPage />} />
+				<Route exact path="/" element={<ServicesPage />} />
 
-				{/* Define routes for all of the pages */}
-				<Route path='/about' element={<AboutPage />} />
-				<Route path='/contact' element={<ContactPage />} />
-				<Route path='/press' element={<PressPage />} />
-				<Route path='/services' element={<ServicesPage />} />
-				<Route path='/wastern' element={<WasternPage />} />
-				<Route path='/message-sent' element={<MessageSentPage />} />
-				<Route path='/message-error' element={<MessageErrorPage />} />
-				<Route path='/links' element={<Links />} />
+				{/* Main Pages */}
+				<Route exact path="/about" element={<AboutPage />} />
+				<Route exact path="/services" element={<ServicesPage />} />
+				<Route exact path="/wastern" element={<WasternPage />} />
+				<Route exact path="/contact" element={<ContactPage />} />
+
+				{/* Special Pages */}
+				<Route exact path="/message-sent" element={<MessageSentPage />} />
+				<Route exact path="/message-error" element={<MessageErrorPage />} />
+				<Route exact path="/links" element={<LinksPage />} />
+
+				{/* 404 */}
+				{/* <Route path="*" element={<PageNotFound />} /> */}
 			</Routes>
 		</>
 	);

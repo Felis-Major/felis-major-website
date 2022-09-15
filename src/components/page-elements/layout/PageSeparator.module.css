@@ -1,26 +1,43 @@
 .page-separator {
-	/* Colors */
 	background-color: #121212;
 	color: #ffffff;
-
-	/* Layout */
 	padding: 25px;
 }
 
-.page-separator__title {
-	/* Colors */
+.page-separator-title {
 	color: #c170cf;
-
-	/* Text */
-	font-size: 60px;
 	text-transform: uppercase;
 	font-family: 'Fontnia Ineth';
 }
 
-.page-separator__sub-title {
-	/* Text */
-	font-size: 30px;
+.page-separator-title__desktop {
+	font-size: 60px;
+}
 
-	/* Layout */
+.page-separator-title__tablet {
+	font-size: 40px;
+}
+
+.page-separator-title__mobile {
+	font-size: 40px;
+	width: fit-content;
+	margin: auto;
+}
+
+.page-separator-subtitle {
 	margin-left: 20px;
+}
+
+.page-separator-subtitle__desktop {
+	font-size: 30px;
+}
+
+.page-separator-subtitle__tablet {
+	font-size: 25px;
+}
+
+.page-separator-subtitle__mobile {
+	width: fit-content;
+	margin: auto;
+	font-size: 25px;
 }

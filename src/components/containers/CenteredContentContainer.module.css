@@ -1,14 +1,17 @@
 .centered-content-container {
-	display: flex;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-	align-items: center;
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+  min-width: fit-content;
 }
 
 .centered-content-container-row {
-	flex-direction: row;
+  flex-direction: row;
 }
 
 .centered-content-container-column {
-	flex-direction: column;
+  flex-direction: column;
 }

@@ -1,24 +1,21 @@
 // Import styles
-import formElementStyle from '../FormElement.module.css';
-import dropdownStyle from './Dropdown.module.css';
-
-// Import helpers
-import appendClassName from '../../../../helpers/append-class-name';
+import formElementStyle from "../FormElement.module.css";
+import dropdownStyle from "./Dropdown.module.css";
 
 function Dropdown(props) {
-	const baseClasses = `${formElementStyle['form-element']} ${dropdownStyle['dropdown']}`;
-	const classes = appendClassName(baseClasses, props.className);
-	return (
-		<select
-			className={classes}
-			onChange={(event) => props.onChange(event.target.value)}
-			options={props.options}
-		>
-			{props.options.map((x) => (
-				<option value={x.value}>{x.text}</option>
-			))}
-		</select>
-	);
+  const classes = `${formElementStyle["form-element"]} ${dropdownStyle["dropdown"]}`;
+
+  return (
+    <select
+      className={`${classes} ${props.className}`}
+      onChange={(event) => props.onChange(event.target.value)}
+      options={props.options}
+    >
+      {props.options.map((x) => (
+        <option value={x.value}>{x.text}</option>
+      ))}
+    </select>
+  );
 }
 
 export default Dropdown;

@@ -25,7 +25,6 @@ function ImageLink(props) {
 		>
 			<img
 				width={props.size}
-				height={props.size}
 				src={isLinkHovered ? props.imgHovered : props.imgNormal}
 			/>
 		</Link>

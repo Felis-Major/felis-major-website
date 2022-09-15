@@ -1,19 +1,28 @@
 // Import styles
-import style from './PageSeparator.module.css';
+import { useState } from 'react';
+import { useDeviceTypeChanged } from '../../../utilities/useOnWindowResize';
+import pageSeparatorStyle from './PageSeparator.module.css';
 
-function PageSeparator(props) {
+export default function PageSeparator(props) {
+	const [device, setDevice] = useState('desktop');
+	useDeviceTypeChanged(setDevice);
+
+	const pageSeparatorClass = pageSeparatorStyle['page-separator'];
+	const pageSeparatorClasses = `${pageSeparatorClass} ${props.className}`;
+
+	const titleClass = pageSeparatorStyle['page-separator-title'];
+	const titleDeviceClass = pageSeparatorStyle[`page-separator-title__${device}`];
+	const titleClasses = `${titleClass} ${titleDeviceClass}`;
+
+	const subtitleClass = pageSeparatorStyle['page-separator-subtitle'];
+	const subtitleDeviceClass = pageSeparatorStyle[`page-separator-subtitle__${device}`];
+	const subtitleClasses = `${subtitleClass} ${subtitleDeviceClass}`;
+
 	return (
-		<div className={style['page-separator']}>
-			{/* Display Page Separator title */}
-			<h1 className={style['page-separator__title']}>{props.title}</h1>
-
-			{/* Display all sub titles of this separator */}
-			<p className={style['page-separator__sub-title']}>{props.subtitle}</p>
-
-			{/* Insert all optional children */}
+		<div className={pageSeparatorClasses}>
+			<h1 className={titleClasses}>{props.title}</h1>
+			<p className={subtitleClasses}>{props.subtitle}</p>
 			{props.children}
 		</div>
 	);
 }
-
-export default PageSeparator;

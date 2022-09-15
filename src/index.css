@@ -4,21 +4,21 @@
 	font-family: 'Berlin';
 	font-style: normal;
 	font-weight: normal;
-	src: url('fonts/Reef.otf');
+	src: url('fonts/barlow-regular.ttf');
 }
 
 @font-face {
 	font-family: 'Berlin';
 	font-style: normal;
 	font-weight: bold;
-	src: url('fonts/Reef.otf');
+	src: url('fonts/barlow-bold.ttf');
 }
 
 @font-face {
 	font-family: 'Fontnia Ineth';
 	font-style: normal;
-	font-weight: normal;
-	src: url('fonts/fontnya-ineth.ttf');
+	font-weight: lighter;
+	src: url('fonts/bodo-amat.ttf');
 }
 
 /* Main Components */
@@ -31,5 +31,5 @@
 }
 
 body {
-	background-color: #753fbe;
+	background-color: white;
 }

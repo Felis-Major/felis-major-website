@@ -1,9 +1,23 @@
 :root {
-	--text-color: #c79eff;
+  --text-color: #c79eff;
 }
 
 .page-title {
-	color: var(--text-color);
-	font-size: 62px;
-	text-transform: uppercase;
+  display: block;
+  font-family: "Fontnia Ineth";
+  color: var(--text-color);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.large {
+  font-size: 62px;
+}
+
+.medium {
+  font-size: 48px;
+}
+
+.small {
+  font-size: 36px;
 }

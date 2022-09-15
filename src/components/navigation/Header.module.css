@@ -21,16 +21,43 @@
 /* Logo */
 
 .logo-container {
-	flex-basis: 200px;
-	text-align: center;
+	flex-basis: 250px;
+	text-align: left;
 }
 
-/* Page Links */
+/* Nav Links */
 
 .nav-links {
 	flex: 1;
 	list-style: none;
 	display: flex;
+}
+
+.nav-links__desktop {
+	justify-content: left;
+}
+
+.nav-links__tablet {
+	justify-content: right;
+}
+
+.nav-links__mobile {
+	flex-direction: column;
+}
+
+.nav-link__desktop {
+	font-size: 26px;
+	flex-basis: 250px;
+}
+
+.nav-link__tablet {
+	font-size: 20px;
+	flex-basis: 200px;
+}
+
+.nav-link__mobile {
+	font-size: 16px;
+	flex-basis: 250px;
 }
 
 /* Social Links */

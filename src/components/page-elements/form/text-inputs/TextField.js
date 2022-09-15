@@ -1,15 +1,19 @@
 // Import styles
-import formElementStyle from '../FormElement.module.css';
-import textInputStyle from './TextInput.module.css';
-import textFieldStyle from './TextField.module.css';
-
-// Import helpers
-import appendClassName from '../../../../helpers/append-class-name';
+import formElementStyle from "../FormElement.module.css";
+import textInputStyle from "./TextInput.module.css";
+import textFieldStyle from "./TextField.module.css";
 
 function TextField(props) {
-	const baseClasses = `${formElementStyle['form-element']} ${textInputStyle['text-input']} ${textFieldStyle['text-field']}`;
-	const classes = appendClassName(baseClasses, props.className);
-	return <input className={classes} placeholder={props.placeholder} />;
+  const formElementClass = formElementStyle["form-element"];
+  const textInputClass = textInputStyle["text-input"];
+  const textAreaClass = textFieldStyle["text-field"];
+  const classes = `${formElementClass} ${textInputClass} ${textAreaClass}`;
+  return (
+    <input
+      className={`${classes} ${props.className}`}
+      placeholder={props.placeholder}
+    />
+  );
 }
 
 export default TextField;
