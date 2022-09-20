@@ -1,26 +1,30 @@
 .horizontal-card {
-  display: flex;
-  width: 100%;
-  padding: 20px;
-  margin: 50px 0px;
-  background-color: #8347d3;
-  border-radius: 10px;
+	display: flex;
+	padding: 20px;
+	margin: 50px 0px;
+	background-color: #8347d3;
+	border-radius: 10px;
 }
 
 .horizontal-card-image img {
-  border-radius: 10px;
+	border-radius: 10px;
 }
 
 .horizontal-card-content {
-  padding: 20px;
+	padding: 20px;
 }
 
 .align-left {
-  flex-direction: row;
-  text-align: left;
+	flex-direction: row;
+	text-align: left;
 }
 
 .align-right {
-  flex-direction: row-reverse;
-  text-align: right;
+	flex-direction: row-reverse;
+	text-align: right;
+}
+
+.align-center {
+	flex-direction: column;
+	text-align: center;
 }

@@ -25,7 +25,7 @@ export default function Header() {
 			<nav className={headerStyle['nav']}>
 				<div className={headerStyle['logo-container']}>
 					<ImageLink
-						link="/"
+						link='/'
 						size={{ desktop: 200, tablet: 150, mobile: 100 }[device]}
 						imgNormal={Logo}
 						imgHovered={Logo}
@@ -63,10 +63,10 @@ function NavLinks() {
 
 	return (
 		<ul className={classes}>
-			<NavLink target="/about">{t(localizationKeys.navAboutUs)}</NavLink>
-			<NavLink target="/services">{t(localizationKeys.navServices)}</NavLink>
-			<NavLink target="/wastern">{t(localizationKeys.navWastern)}</NavLink>
-			<NavLink target="/contact">{t(localizationKeys.navContactUs)}</NavLink>
+			<NavLink target='/about'>{t(localizationKeys.navAboutUs)}</NavLink>
+			<NavLink target='/services'>{t(localizationKeys.navServices)}</NavLink>
+			<NavLink target='/wastern'>{t(localizationKeys.navWastern)}</NavLink>
+			<NavLink target='/contact'>{t(localizationKeys.navContactUs)}</NavLink>
 		</ul>
 	);
 }
@@ -97,14 +97,14 @@ function SocialLinks() {
 	return (
 		<div className={headerStyle['socials-container']}>
 			<ImageLink
-				link="#"
-				size="48"
+				link='#'
+				size='48'
 				imgNormal={TwitterNormal}
 				imgHovered={TwitterHover}
 			/>
 			<ImageLink
-				link="#"
-				size="48"
+				link='#'
+				size='48'
 				imgNormal={InstagramNormal}
 				imgHovered={InstagramHover}
 			/>

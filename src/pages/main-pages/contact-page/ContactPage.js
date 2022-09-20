@@ -23,17 +23,17 @@ function ContactPage() {
 		<>
 			<Header />
 			<PageHeader
-				imageUrl="https://via.placeholder.com/2000x400"
+				imageUrl='https://via.placeholder.com/2000x400'
 				title={t(localizationKeys.pageTitleContactUs)}
 				subtitle={t(localizationKeys.pageSubtitleContactUs)}
 			/>
 
 			<ContentContainer>
-				<CenteredContentContainer direction="column">
+				<CenteredContentContainer direction='column'>
 					<Button
-						mode="url"
+						mode='url'
 						className={contactPageStyle['contact-form-element']}
-						target="mailto:contact@felismajor.com"
+						target='mailto:contact@felismajor.com'
 					>
 						{t(localizationKeys.pageFormButtonTo)}: contact@felismajor.com
 					</Button>

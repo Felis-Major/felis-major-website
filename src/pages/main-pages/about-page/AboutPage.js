@@ -8,19 +8,17 @@ import PageBlock from '../../../components/containers/PageBlock';
 import CenteredContentContainer from '../../../components/containers/CenteredContentContainer';
 import PageHeader from '../../../components/page-elements/layout/PageHeader';
 import TeamCard from '../../../components/page-elements/cards/TeamCard';
-import Header from '../../../components/navigation/Header';
-import Footer from '../../../components/navigation/Footer';
 import PageText from '../../../components/page-elements/text/PageText';
 import PageSection from '../../../components/page-elements/layout/PageSection';
+import Page from '../../../components/page-elements/Page';
 
 function AboutPage() {
 	const { t } = useTranslation();
 
 	return (
-		<>
-			<Header />
+		<Page showHeader='true' showFooter='true'>
 			<PageHeader
-				imageUrl="https://via.placeholder.com/2000x400"
+				imageUrl='https://via.placeholder.com/2000x400'
 				title={t(localizationKeys.pageTitleAboutUs)}
 				subtitle={t(localizationKeys.pageSubtitleAboutUs)}
 			/>
@@ -29,16 +27,16 @@ function AboutPage() {
 				<PageSection title={t(localizationKeys.pageSectionTeam)}>
 					<CenteredContentContainer>
 						<TeamCard
-							src="https://via.placeholder.com/400"
-							name="Suzanne Clemente"
+							src='https://via.placeholder.com/400'
+							name='Suzanne Clemente'
 							jobTitle={t(localizationKeys.pageTeamCardCEO)}
-							twitterProfile="suzclemente"
+							twitterProfile='suzclemente'
 						/>
 						<TeamCard
-							src="https://via.placeholder.com/400"
-							name="Robert Edilber"
+							src='https://via.placeholder.com/400'
+							name='Robert Edilber'
 							jobTitle={t(localizationKeys.pageTeamCardCEO)}
-							twitterProfile="rsedilber"
+							twitterProfile='rsedilber'
 						/>
 					</CenteredContentContainer>
 				</PageSection>
@@ -56,17 +54,16 @@ function AboutPage() {
 				<PageSection title={t(localizationKeys.pageSectionTwitterFeed)}>
 					<CenteredContentContainer>
 						<TwitterTimelineEmbed
-							tweetLimit="2"
-							sourceType="profile"
-							screenName="felismajorrr"
+							tweetLimit='2'
+							sourceType='profile'
+							screenName='felismajorrr'
 							options={{ width: 700 }}
-							theme="dark"
+							theme='dark'
 						/>
 					</CenteredContentContainer>
 				</PageSection>
 			</PageBlock>
-			<Footer />
-		</>
+		</Page>
 	);
 }
 
