@@ -6,6 +6,8 @@
 
 .nav-link {
 	text-align: center;
+	display: flex;
+	align-items: center;
 }
 
 .nav-link a {

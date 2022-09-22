@@ -30,12 +30,12 @@ export default function Footer() {
 		<footer className={footerStyle['footer']}>
 			<nav className={footerStyle['nav']}>
 				<ul className={navLinksClasses}>
-					<NavLink target="/about">{t(localizationKeys.navAboutUs)}</NavLink>
-					<NavLink target="/services">
+					<NavLink target='/about'>{t(localizationKeys.navAboutUs)}</NavLink>
+					<NavLink target='/services'>
 						{t(localizationKeys.navServices)}
 					</NavLink>
-					<NavLink target="/wastern">{t(localizationKeys.navWastern)}</NavLink>
-					<NavLink target="/contact">
+					<NavLink target='/wastern'>{t(localizationKeys.navWastern)}</NavLink>
+					<NavLink target='/contact'>
 						{t(localizationKeys.navContactUs)}
 					</NavLink>
 				</ul>

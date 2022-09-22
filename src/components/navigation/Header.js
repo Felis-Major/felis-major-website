@@ -35,7 +35,7 @@ export default function Header() {
 					{
 						desktop: <NavLinks />,
 						tablet: <NavLinks />,
-						mobile: <></>,
+						mobile: <MobileMenu />,
 					}[device]
 				}
 			</nav>
@@ -107,6 +107,20 @@ function SocialLinks() {
 				size='48'
 				imgNormal={InstagramNormal}
 				imgHovered={InstagramHover}
+			/>
+		</div>
+	);
+}
+
+function MobileMenu() {
+	const [showLinks, setShowLinks] = useState(false);
+
+	return (
+		<div>
+			{showLinks ? <NavLinks /> : <></>}
+			<img
+				onClick={() => setShowLinks(!showLinks)}
+				src='https://via.placeholder.com/64x64'
 			/>
 		</div>
 	);

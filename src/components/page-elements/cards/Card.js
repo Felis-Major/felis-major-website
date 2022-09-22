@@ -5,6 +5,7 @@ sizes['small'] = 'card__small';
 sizes['medium'] = 'card__medium';
 sizes['large'] = 'card__large';
 sizes['responsive'] = 'card__responsive';
+
 function getSizeStyle(arg) {
 	if (sizes[arg] !== null) {
 		return style[sizes[arg]];
@@ -14,7 +15,9 @@ function getSizeStyle(arg) {
 }
 
 function Card(props) {
-	let classes = `${style['card']} ${getSizeStyle(props.size)}`;
+	let classes = `${style['card']} ${getSizeStyle(props.size)} ${
+		props.className
+	}`;
 	return <div className={classes}>{props.children}</div>;
 }
 

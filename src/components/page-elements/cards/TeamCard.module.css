@@ -1,5 +1,6 @@
-/* .team-card {
-} */
+.team-card {
+	margin: 20px;
+}
 
 .team-card-image {
 	border-radius: 10px;

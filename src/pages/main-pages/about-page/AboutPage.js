@@ -11,6 +11,8 @@ import TeamCard from '../../../components/page-elements/cards/TeamCard';
 import PageText from '../../../components/page-elements/text/PageText';
 import PageSection from '../../../components/page-elements/layout/PageSection';
 import Page from '../../../components/page-elements/Page';
+import { useDeviceTypeChanged } from '../../../utilities/useOnWindowResize';
+import { useState } from 'react';
 
 function AboutPage() {
 	const { t } = useTranslation();
@@ -53,18 +55,57 @@ function AboutPage() {
 
 				<PageSection title={t(localizationKeys.pageSectionTwitterFeed)}>
 					<CenteredContentContainer>
-						<TwitterTimelineEmbed
-							tweetLimit='2'
-							sourceType='profile'
-							screenName='felismajorrr'
-							options={{ width: 700 }}
-							theme='dark'
-						/>
+						<Twitter />
 					</CenteredContentContainer>
 				</PageSection>
 			</PageBlock>
 		</Page>
 	);
+}
+
+function Twitter() {
+	const [device, setDevice] = useState('desktop');
+	useDeviceTypeChanged(setDevice);
+
+	const desktopFeed = (
+		<TwitterTimelineEmbed
+			tweetLimit='2'
+			sourceType='profile'
+			screenName='felismajorrr'
+			options={{
+				width: 500,
+			}}
+			theme='dark'
+		/>
+	);
+
+	const tabletFeed = (
+		<TwitterTimelineEmbed
+			tweetLimit='2'
+			sourceType='profile'
+			screenName='felismajorrr'
+			options={{
+				width: 500,
+			}}
+			theme='dark'
+		/>
+	);
+
+	const mobileFeed = (
+		<TwitterTimelineEmbed
+			tweetLimit='2'
+			sourceType='profile'
+			screenName='felismajorrr'
+			options={{
+				width: 200,
+			}}
+			theme='dark'
+		/>
+	);
+
+	return { desktop: desktopFeed, tablet: tabletFeed, mobile: mobileFeed }[
+		device
+	];
 }
 
 export default AboutPage;
