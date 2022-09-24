@@ -21,13 +21,17 @@
 	src: url('fonts/bodo-amat.ttf');
 }
 
-/* Main Components */
+/* Content */
+
+:root {
+	font-size: 100%;
+}
 
 * {
 	box-sizing: border-box;
-	font-family: 'Berlin';
 	margin: 0px;
 	padding: 0px;
+	font-family: 'Berlin';
 }
 
 body {

@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 // Import main pages
 import AboutPage from './pages/main-pages/about-page/AboutPage';
 import ServicesPage from './pages/main-pages/services-page/ServicesPage';
+import PressPage from './pages/main-pages/press-page/PressPage';
 import WasternPage from './pages/main-pages/wastern-page/WasternPage';
 import ContactPage from './pages/main-pages/contact-page/ContactPage';
 
@@ -21,18 +22,19 @@ function App() {
 		<>
 			<Routes>
 				{/* Define the default route */}
-				<Route exact path="/" element={<ServicesPage />} />
+				<Route exact path='/' element={<PressPage />} />
+				{/* <Route exact path='/' element={<ServicesPage />} /> */}
 
 				{/* Main Pages */}
-				<Route exact path="/about" element={<AboutPage />} />
-				<Route exact path="/services" element={<ServicesPage />} />
-				<Route exact path="/wastern" element={<WasternPage />} />
-				<Route exact path="/contact" element={<ContactPage />} />
+				<Route exact path='/about' element={<AboutPage />} />
+				<Route exact path='/services' element={<ServicesPage />} />
+				<Route exact path='/wastern' element={<WasternPage />} />
+				<Route exact path='/contact' element={<ContactPage />} />
 
 				{/* Special Pages */}
-				<Route exact path="/message-sent" element={<MessageSentPage />} />
-				<Route exact path="/message-error" element={<MessageErrorPage />} />
-				<Route exact path="/links" element={<LinksPage />} />
+				<Route exact path='/message-sent' element={<MessageSentPage />} />
+				<Route exact path='/message-error' element={<MessageErrorPage />} />
+				<Route exact path='/links' element={<LinksPage />} />
 
 				{/* 404 */}
 				{/* <Route path="*" element={<PageNotFound />} /> */}

@@ -1,61 +1,53 @@
-:root {
-	--footerBackgroundColor: #121212;
-}
-
-/* Containers */
+/* =======================
+ * Root
+ * ======================= */
 
 .footer {
-	background-color: var(--footerBackgroundColor);
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.nav {
-	padding: 5px;
-	flex: 1;
-	display: flex;
-	align-items: center;
-}
-
-/* Page Links */
-
-.nav-links {
-	flex: 1;
-	list-style: none;
-	display: flex;
-}
-
-.nav-links__desktop {
-	justify-content: left;
-}
-
-.nav-links__tablet {
-	justify-content: left;
-}
-
-.nav-links__mobile {
+	justify-content: space-evenly;
 	flex-direction: column;
-	align-items: flex-start;
+	padding: 10px 20px 10px 20px;
+	min-height: 70px;
 }
 
-.nav-link__desktop {
-	font-size: 20px;
-	flex-basis: 250px;
+/* =======================
+ * Top & Bottom Sections
+ * ======================= */
+
+/* Top Section */
+.footer > .top-section {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
-.nav-link__tablet {
-	font-size: 20px;
-	flex-basis: 200px;
+/* Links */
+.footer > .top-section > .links {
+	display: flex;
 }
 
-.nav-link__mobile {
-	font-size: 25px;
-	flex-basis: 50px;
+.footer > .top-section > .links > .link {
+	display: block;
+	margin: 0px 10px 0px 10px;
+	font-size: 1.2rem;
 }
 
-.footer-dropdown {
-	width: 100px !important;
-	padding: 5px !important;
-	margin-right: 15px !important;
+/* @Media Query: Phones */
+@media screen and (max-width: 1200px) {
+	/* Switch links direction */
+	.footer > .top-section > .links {
+		flex-direction: column;
+	}
+
+	/* Remove margin from links */
+	.footer > .top-section > .links > .link {
+		margin: 0px;
+	}
+}
+
+/* Bottom Section */
+.footer > .bottom-section > .copyright {
+	text-align: center;
+	color: #494949;
+	margin: 10px 0px 0px 0px;
 }
