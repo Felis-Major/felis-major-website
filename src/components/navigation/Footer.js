@@ -3,7 +3,7 @@
  * ======================= */
 
 import NavLink from './content/NavLink';
-import style from './Footer.module.css';
+import style from './Footer.module.scss';
 
 /* =======================
  * Main
@@ -67,7 +67,7 @@ const LanguageSelection = () => {
 
 	return (
 		<div className={languageSelectionClass}>
-			<select name='language'>
+			<select className='form-element button' name='language'>
 				<option value='en'>English</option>
 				<option value='fr'>Français</option>
 			</select>

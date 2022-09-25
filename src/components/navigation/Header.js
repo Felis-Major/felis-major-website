@@ -3,7 +3,7 @@
  * ======================= */
 
 import { useState } from 'react';
-import style from './Header.module.css';
+import style from './Header.module.scss';
 
 import fmLogo from '../../imgs/logos/felis-major/fm-logo-wide.png';
 import twitterNormal from '../../imgs/logos/socials/twitter-normal.png';

@@ -8,6 +8,7 @@
 	flex-direction: column;
 	padding: 10px 20px 10px 20px;
 	min-height: 70px;
+	background-color: #161616;
 }
 
 /* =======================
@@ -24,23 +25,20 @@
 /* Links */
 .footer > .top-section > .links {
 	display: flex;
+
+	/* @Media Query: Phones */
+	@media screen and (max-width: 1200px) {
+		flex-direction: column;
+	}
 }
 
 .footer > .top-section > .links > .link {
 	display: block;
 	margin: 0px 10px 0px 10px;
 	font-size: 1.2rem;
-}
 
-/* @Media Query: Phones */
-@media screen and (max-width: 1200px) {
-	/* Switch links direction */
-	.footer > .top-section > .links {
-		flex-direction: column;
-	}
-
-	/* Remove margin from links */
-	.footer > .top-section > .links > .link {
+	/* @Media Query: Phones */
+	@media screen and (max-width: 1200px) {
 		margin: 0px;
 	}
 }
