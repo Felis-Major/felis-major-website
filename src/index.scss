@@ -87,14 +87,11 @@ h1 {
 
 	/* Media Query: Phones */
 	@media screen and (max-width: $mobile) {
-		font-size: 2.5rem;
+		font-size: 2rem;
 	}
 }
 
 /* Text */
-
-p {
-}
 
 ul {
 	list-style-position: inside;
@@ -113,8 +110,22 @@ ul {
 .flex {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
 	gap: 20px;
+}
+
+.flex-centered {
+	@extend .flex;
+	justify-content: space-evenly;
+}
+
+.flex-left {
+	@extend .flex;
+	justify-content: left;
+}
+
+.flex-right {
+	@extend .flex;
+	justify-content: right;
 }
 
 /* Form Elements */
@@ -126,6 +137,7 @@ ul {
 }
 
 .button {
+	@extend .form-element;
 	background-color: $button-background-color__normal;
 	border: 2px solid $button-background-color__hover;
 }
@@ -135,6 +147,7 @@ ul {
 }
 
 .text-box {
+	@extend .form-element;
 	background-color: $textbox-background-color__normal;
 	border: 2px solid $textbox-background-color__hover;
 }

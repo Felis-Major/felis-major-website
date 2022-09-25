@@ -2,7 +2,8 @@
  * Imports
  * ======================= */
 
-import style from './NavLink.module.css';
+import { Link } from 'react-router-dom';
+import style from './NavLink.module.scss';
 
 /* =======================
  * Main
@@ -17,9 +18,9 @@ const NavLink = (props) => {
 	}
 
 	return (
-		<a className={classes} href={props.target}>
+		<Link className={classes} to={props.target}>
 			{props.children}
-		</a>
+		</Link>
 	);
 };
 

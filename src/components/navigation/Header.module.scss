@@ -4,7 +4,7 @@
 
 .header {
 	display: flex;
-	height: 80px;
+	height: 100px;
 	background-color: #161616;
 }
 
@@ -37,11 +37,10 @@
 }
 
 /* Hide button */
-.left-section > .menu-button {
+.menu-button {
 	display: none;
 	width: 50px;
 	height: 50px;
-	background-color: aliceblue;
 	background-size: cover;
 	border-radius: 5px;
 
@@ -49,6 +48,16 @@
 	@media screen and (max-width: 1200px) {
 		display: block;
 	}
+}
+
+.left-section > .menu-button__normal {
+	@extend .menu-button;
+	background-image: url('../../imgs/elements/link-menu-normal.png');
+}
+
+.left-section > .menu-button__active {
+	@extend .menu-button;
+	background-image: url('../../imgs/elements/link-menu-active.png');
 }
 
 /* Display links */
@@ -70,7 +79,7 @@
 		flex-direction: column;
 		position: absolute;
 		background-color: #161616;
-		top: 80px;
+		top: 100px;
 		left: 0px;
 		right: 0px;
 		align-items: center;
@@ -81,7 +90,7 @@
 /* Nav Links */
 .left-section > .links > .link {
 	text-align: center;
-	width: 150px;
+	width: 200px;
 	display: block;
 	font-size: 1.3rem;
 	margin: 0px 10px 0 10px;

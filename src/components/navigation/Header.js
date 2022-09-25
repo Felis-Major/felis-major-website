@@ -8,7 +8,8 @@ import style from './Header.module.scss';
 import fmLogo from '../../imgs/logos/felis-major/fm-logo-wide.png';
 import twitterNormal from '../../imgs/logos/socials/twitter-normal.png';
 import instagramNormal from '../../imgs/logos/socials/instagram-normal.png';
-import NavLink from './content/NavLink';
+import NavLink from './links/NavLink';
+import links from './links/links';
 
 /* =======================
  * Main
@@ -39,30 +40,24 @@ export default Header;
 const LeftSection = () => {
 	const leftSectionClass = style['left-section'];
 	const logoClass = style['logo'];
-	const menuButtonClass = style['menu-button'];
+	const menuButtonNormalClass = style['menu-button__normal'];
+	const menuButtonActiveClass = style['menu-button__active'];
 	const linksClass = style['links'];
 	const linkClass = style['link'];
 	const hiddenID = style['hidden'];
 
 	const [showLinks, setShowLinks] = useState(false);
-	const links = [
-		{ key: 'a', target: '#', content: 'About Us' },
-		{ key: 'b', target: '#', content: 'Our Services' },
-		{ key: 'c', target: '#', content: 'Wastern' },
-		{ key: 'd', target: '#', content: 'Press' },
-		{ key: 'e', target: '#', content: 'Contact Us' },
-	];
 
 	return (
 		<div className={leftSectionClass}>
 			<img className={logoClass} src={fmLogo} />
 			<a
 				onClick={() => setShowLinks(!showLinks)}
-				className={menuButtonClass}
+				className={showLinks ? menuButtonActiveClass : menuButtonNormalClass}
 			></a>
 			<div className={linksClass} id={showLinks ? hiddenID : ''}>
-				{links.map((link) => (
-					<NavLink className={linkClass} target={link.target} key={link.key}>
+				{links.map((link, index) => (
+					<NavLink className={linkClass} target={link.target} key={index}>
 						{link.content}
 					</NavLink>
 				))}

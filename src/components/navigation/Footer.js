@@ -2,8 +2,9 @@
  * Imports
  * ======================= */
 
-import NavLink from './content/NavLink';
+import NavLink from './links/NavLink';
 import style from './Footer.module.scss';
+import links from './links/links';
 
 /* =======================
  * Main
@@ -34,21 +35,13 @@ export default Footer;
  * ======================= */
 
 const Links = () => {
-	const links = [
-		{ key: 'a', target: '#', content: 'About Us' },
-		{ key: 'b', target: '#', content: 'Our Services' },
-		{ key: 'c', target: '#', content: 'Wastern' },
-		{ key: 'd', target: '#', content: 'Press' },
-		{ key: 'e', target: '#', content: 'Contact Us' },
-	];
-
 	const linksClass = style['links'];
 	const linkClass = style['link'];
 
 	return (
 		<div className={linksClass}>
-			{links.map((link) => (
-				<NavLink className={linkClass} target={link.target} key={link.key}>
+			{links.map((link, index) => (
+				<NavLink className={linkClass} target={link.target} key={index}>
 					{link.content}
 				</NavLink>
 			))}
@@ -67,7 +60,7 @@ const LanguageSelection = () => {
 
 	return (
 		<div className={languageSelectionClass}>
-			<select className='form-element button' name='language'>
+			<select className='button' name='language'>
 				<option value='en'>English</option>
 				<option value='fr'>Français</option>
 			</select>
