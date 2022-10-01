@@ -1,4 +1,12 @@
-import style from './TeamCard.module.css';
+/* =======================
+ * Imports
+ * ======================= */
+
+import style from './TeamCard.module.scss';
+
+/* =======================
+ * Main
+ * ======================= */
 
 const TeamCard = (props) => {
 	const cardClass = style['card'];
@@ -15,10 +23,7 @@ const TeamCard = (props) => {
 
 	return (
 		<div className={classes}>
-			<img
-				className={portraitClass}
-				src='https://via.placeholder.com/1000x1000'
-			/>
+			<img className={portraitClass} src={props.portraitUrl} />
 			<div className={nameClass}>{props.name}</div>
 			<div className={jobTitleClass}>{props.jobTitle}</div>
 			<TwitterLink handle={props.handle} />
@@ -27,6 +32,10 @@ const TeamCard = (props) => {
 };
 
 export default TeamCard;
+
+/* =======================
+ * Private
+ * ======================= */
 
 const TwitterLink = (props) => {
 	const twitterLinkClass = style['twitter-link'];

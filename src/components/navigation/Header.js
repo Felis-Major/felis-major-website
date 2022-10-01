@@ -4,7 +4,6 @@
 
 import { useState } from 'react';
 import style from './Header.module.scss';
-
 import fmLogo from '../../imgs/logos/felis-major/fm-logo-wide.png';
 import twitterNormal from '../../imgs/logos/socials/twitter-normal.png';
 import instagramNormal from '../../imgs/logos/socials/instagram-normal.png';
@@ -40,7 +39,7 @@ export default Header;
 const LeftSection = () => {
 	const leftSectionClass = style['left-section'];
 	const logoClass = style['logo'];
-	const menuButtonNormalClass = style['menu-button__normal'];
+	const menuButtonClass = style['menu-button'];
 	const menuButtonActiveClass = style['menu-button__active'];
 	const linksClass = style['links'];
 	const linkClass = style['link'];
@@ -53,14 +52,18 @@ const LeftSection = () => {
 			<img className={logoClass} src={fmLogo} />
 			<a
 				onClick={() => setShowLinks(!showLinks)}
-				className={showLinks ? menuButtonActiveClass : menuButtonNormalClass}
+				className={`${menuButtonClass} ${
+					showLinks ? menuButtonActiveClass : ''
+				}`}
 			></a>
+
 			<div className={linksClass} id={showLinks ? hiddenID : ''}>
 				{links.map((link, index) => (
 					<NavLink className={linkClass} target={link.target} key={index}>
 						{link.content}
 					</NavLink>
 				))}
+				<SocialLinks />
 			</div>
 		</div>
 	);
@@ -68,12 +71,37 @@ const LeftSection = () => {
 
 const RightSection = () => {
 	const rightSectionClass = style['right-section'];
-	const socialLinkClass = style['social-link'];
 
 	return (
 		<div className={rightSectionClass}>
-			<img className={socialLinkClass} src={twitterNormal} />
-			<img className={socialLinkClass} src={instagramNormal} />
+			<SocialLinks />
 		</div>
+	);
+};
+
+const SocialLinks = () => {
+	const socialLinksClass = style['social-links'];
+
+	return (
+		<div className={socialLinksClass}>
+			<SocialLink
+				src={twitterNormal}
+				target='https://twitter.com/felismajorrr'
+			/>
+			<SocialLink
+				src={instagramNormal}
+				target='https://instagram.com/felismajorrr?igshid=YmMyMTA2M2Y='
+			/>
+		</div>
+	);
+};
+
+const SocialLink = (props) => {
+	const socialLinkClass = style['social-link'];
+
+	return (
+		<a href={props.target} target='_blank' className={socialLinkClass}>
+			<img src={props.src} />
+		</a>
 	);
 };

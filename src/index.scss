@@ -47,6 +47,10 @@
 }
 
 body {
+	background-color: $dark-background-color;
+}
+
+.content {
 	background-color: $default-background-color;
 }
 
@@ -76,7 +80,7 @@ h6 {
 	text-align: left;
 
 	/* Media Query: Phones */
-	@media screen and (max-width: $mobile) {
+	@media screen and (max-width: $mobile-max-width) {
 		text-align: center;
 	}
 }
@@ -86,7 +90,7 @@ h1 {
 	margin: 10px;
 
 	/* Media Query: Phones */
-	@media screen and (max-width: $mobile) {
+	@media screen and (max-width: $mobile-max-width) {
 		font-size: 2rem;
 	}
 }
@@ -103,6 +107,20 @@ ul {
 	padding: 10px;
 }
 
+.card-wide {
+	@extend .card;
+	width: 100%;
+	max-width: 1000px;
+}
+
+.dark-background {
+	background-color: $dark-background-color;
+}
+
+.light-background {
+	background-color: #8347d3;
+}
+
 .container {
 	padding: 20px;
 }
@@ -113,9 +131,14 @@ ul {
 	gap: 20px;
 }
 
+.flex-column {
+	flex-direction: column;
+}
+
 .flex-centered {
 	@extend .flex;
 	justify-content: space-evenly;
+	align-items: center;
 }
 
 .flex-left {
@@ -132,14 +155,21 @@ ul {
 
 .form-element {
 	font-size: 1rem;
-	padding: 10px;
+	padding: 15px;
+	border: none;
 	border-radius: 10px;
+	color: $text-default-color;
+	font-weight: normal;
+}
+
+.form-element:hover {
+	text-decoration: none;
 }
 
 .button {
 	@extend .form-element;
 	background-color: $button-background-color__normal;
-	border: 2px solid $button-background-color__hover;
+	text-align: center;
 }
 
 .button:hover {
@@ -154,4 +184,23 @@ ul {
 
 .text-box:hover {
 	background-color: $textbox-background-color__hover;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	width: 100%;
+	max-width: 700px;
+	margin: auto;
+}
+
+form > * {
+	width: 100%;
+}
+
+form > *[type='submit'] {
+	min-width: fit-content !important;
+	width: 70% !important;
 }

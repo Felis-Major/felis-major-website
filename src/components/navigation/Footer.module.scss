@@ -1,4 +1,17 @@
 /* =======================
+ * Imports
+ * ======================= */
+
+@import '../../scss-configs/colors.scss';
+@import '../../scss-configs/breakpoints.scss';
+
+/* =======================
+ * Variables
+ * ======================= */
+
+$footer-min-height: 70px;
+
+/* =======================
  * Root
  * ======================= */
 
@@ -7,8 +20,8 @@
 	justify-content: space-evenly;
 	flex-direction: column;
 	padding: 10px 20px 10px 20px;
-	min-height: 70px;
-	background-color: #161616;
+	min-height: $footer-min-height;
+	background-color: $dark-background-color;
 }
 
 /* =======================
@@ -27,7 +40,7 @@
 	display: flex;
 
 	/* @Media Query: Phones */
-	@media screen and (max-width: 1200px) {
+	@media screen and (max-width: $mobile-max-width) {
 		flex-direction: column;
 	}
 }
@@ -38,7 +51,7 @@
 	font-size: 1.2rem;
 
 	/* @Media Query: Phones */
-	@media screen and (max-width: 1200px) {
+	@media screen and (max-width: $mobile-max-width) {
 		margin: 0px;
 	}
 }

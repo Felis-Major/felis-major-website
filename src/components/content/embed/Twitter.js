@@ -1,4 +1,9 @@
+/* =======================
+ * Main
+ * ======================= */
+
 const LastTweet = (props) => {
+	// Updated code from Twitter so that the script tag is refreshed every time the page is loaded
 	window.twttr = (function (d, s, id) {
 		const getFjs = () => {
 			return d.getElementsByTagName(s)[0];

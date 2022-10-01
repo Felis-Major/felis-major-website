@@ -1,0 +1,69 @@
+/* =======================
+ * Imports
+ * ======================= */
+
+@import '../../../scss-configs/colors.scss';
+
+/* =======================
+ * Root
+ * ======================= */
+
+.service-card {
+	flex: 0 1 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main-container {
+	background-color: $dark-background-color;
+	width: 100%;
+	margin-top: 0px;
+	text-align: center;
+}
+
+/* =======================
+ * Elements
+ * ======================= */
+
+.image {
+	margin: 0px;
+	display: block;
+	width: 250px;
+	height: 80px;
+	object-fit: cover;
+	position: relative;
+}
+
+.title {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.description {
+	color: $text-alt-color;
+}
+
+.services-container {
+	margin: 10px;
+	background-color: $button-background-color__normal;
+	border-radius: 10px;
+	padding: 10px;
+	text-align: left;
+}
+
+.list-container {
+	list-style: none;
+}
+
+.list-element {
+	display: flex;
+	align-items: center;
+}
+
+.list-element img {
+	width: 16px;
+	height: 16px;
+	object-fit: cover;
+	margin: 5px;
+}

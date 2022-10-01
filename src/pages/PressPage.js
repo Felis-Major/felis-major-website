@@ -2,7 +2,7 @@
 import Header from '../components/navigation/Header';
 import Footer from '../components/navigation/Footer';
 
-function PressPage() {
+const PressPage = () => {
 	return (
 		<>
 			<Header />
@@ -10,6 +10,6 @@ function PressPage() {
 			<Footer />
 		</>
 	);
-}
+};
 
 export default PressPage;

@@ -1,4 +1,12 @@
+/* =======================
+ * Imports
+ * ======================= */
+
 import style from './PageHeader.module.scss';
+
+/* =======================
+ * Main
+ * ======================= */
 
 const PageHeader = (props) => {
 	const pageHeaderClass = style['page-header'];

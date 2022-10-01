@@ -1,11 +1,25 @@
 /* =======================
+ * Imports
+ * ======================= */
+
+@import '../../scss-configs/colors.scss';
+@import '../../scss-configs/breakpoints.scss';
+
+/* =======================
+ * Variables
+ * ======================= */
+
+$header-height: 100px;
+
+/* =======================
  * Root
  * ======================= */
 
 .header {
+	position: relative;
 	display: flex;
-	height: 100px;
-	background-color: #161616;
+	height: $header-height;
+	background-color: $dark-background-color;
 }
 
 /* =======================
@@ -25,70 +39,91 @@
 	padding: 0px 0px 0px 10px;
 
 	/* @Media Query: Phones */
-	@media screen and (max-width: 1200px) {
+	@media screen and (max-width: $mobile-max-width) {
 		padding: 0px 15px 0px 5px;
 		justify-content: space-between;
 	}
 }
 
-.left-section > .logo {
+.logo {
 	display: block;
 	width: 150px;
 }
 
-/* Hide button */
+/* Menu Button */
 .menu-button {
+	/* Hide the menu button by default */
 	display: none;
-	width: 50px;
-	height: 50px;
-	background-size: cover;
-	border-radius: 5px;
 
 	/* @Media Query: Phones */
-	@media screen and (max-width: 1200px) {
+	@media screen and (max-width: $mobile-max-width) {
+		/* Show the menu button when on mobile */
 		display: block;
+		width: 50px;
+		height: 50px;
+		background-size: cover;
+		background-image: url('../../imgs/elements/link-menu-normal.png');
+		transition: all 0.1s ease-in-out;
 	}
 }
 
-.left-section > .menu-button__normal {
-	@extend .menu-button;
-	background-image: url('../../imgs/elements/link-menu-normal.png');
+.menu-button__active {
+	/* Transform the menu button when active */
+	transform: perspective(50px) rotate3d(0, 1, 0, -15deg) scale(1.1)
+		translateX(-3px);
 }
 
-.left-section > .menu-button__active {
-	@extend .menu-button;
-	background-image: url('../../imgs/elements/link-menu-active.png');
-}
-
-/* Display links */
-.left-section > .links {
+/* Links */
+.links {
 	display: flex;
 	margin: 0px 0px 0px 50px;
+	transition: all 0.1s ease-in-out;
 
 	/* @Media Query: Phones */
-	@media screen and (max-width: 1200px) {
-		display: none;
+	@media screen and (max-width: $mobile-max-width) {
+		opacity: 0;
+		transform: scale(0.95);
+		display: flex;
+		pointer-events: none;
 		margin: 0px;
+		position: absolute;
+		top: $header-height;
+		left: 0px;
+		right: 0px;
+		flex-direction: column;
+		background-color: $dark-background-color;
+		align-items: center;
+		border-radius: 100px;
+		border-bottom: 0px solid #000;
 	}
 }
 
-.left-section > #hidden {
+.links > .social-links {
+	/* Hide social links if not on a mobile display */
+	display: none;
+
 	/* @Media Query: Phones */
-	@media screen and (max-width: 1200px) {
+	@media screen and (max-width: $mobile-max-width) {
 		display: flex;
-		flex-direction: column;
-		position: absolute;
-		background-color: #161616;
-		top: 100px;
-		left: 0px;
-		right: 0px;
-		align-items: center;
+		margin: 20px;
+		gap: 20px;
+	}
+}
+
+.links#hidden {
+	/* @Media Query: Phones */
+	@media screen and (max-width: $mobile-max-width) {
+		display: flex;
+		pointer-events: all;
+		transform: scale(1);
+		opacity: 1;
 		border-radius: 0px 0px 10px 10px;
+		border-bottom: 5px solid #000;
 	}
 }
 
 /* Nav Links */
-.left-section > .links > .link {
+.link {
 	text-align: center;
 	width: 200px;
 	display: block;
@@ -96,7 +131,7 @@
 	margin: 0px 10px 0 10px;
 
 	/* @Media Query: Phones */
-	@media screen and (max-width: 1200px) {
+	@media screen and (max-width: $mobile-max-width) {
 		font-size: 1.2rem;
 		width: 100%;
 		height: 50px;
@@ -113,16 +148,31 @@
 	justify-content: flex-end;
 	flex: 0 0 fit-content;
 	padding: 0px 10px 0px 0px;
+}
 
+.social-links {
+	display: flex;
+}
+
+.right-section > .social-links {
 	/* @Media Query: Phones */
-	@media screen and (max-width: 1200px) {
+	@media screen and (max-width: $mobile-max-width) {
 		display: none;
-		justify-content: flex-end;
 	}
 }
 
-.right-section > .social-link {
+.social-link {
+	margin: 0px 5px 0px 5px;
+	transition: all 0.1s ease-in-out;
+	filter: brightness(200%) grayscale(1);
+}
+
+.social-link:hover {
+	transform: scale(1.1);
+	filter: brightness(100%);
+}
+
+.social-link > img {
 	width: 50px;
 	height: 50px;
-	margin: 0px 5px 0px 5px;
 }
