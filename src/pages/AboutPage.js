@@ -5,6 +5,8 @@ import Footer from '../components/navigation/Footer';
 import TeamCard from '../components/content/cards/TeamCard';
 import Twitter from '../components/content/embed/Twitter';
 import PageHeader from '../components/layout/PageHeader';
+import localizationKeys from '../localization/localization-keys';
+import Translate from '../localization/Translate';
 
 const AboutPage = () => {
 	return (
@@ -13,46 +15,26 @@ const AboutPage = () => {
 
 			<div className='content'>
 				<PageHeader
-					title='About Us'
-					subtitle='The teaam bla bla bla'
+					title={Translate(localizationKeys.aboutPage.pageTitle)}
+					subtitle={Translate(localizationKeys.aboutPage.pageSubtitle)}
 					imageUrl='https://pbs.twimg.com/profile_banners/1353208432032178176/1662896389/1500x500'
 				/>
 
-				<section>
-					<h1>Team</h1>
-					<div className='container flex-centered'>
-						<TeamCard
-							name='Robert Edilber wwww'
-							jobTitle='CEO'
-							handle='rsedilber'
-							portraitUrl='https://via.placeholder.com/1000x1000'
-						/>
-						<TeamCard
-							name='Robert Edilber wwww'
-							jobTitle='CEO'
-							handle='rsedilber'
-							portraitUrl='https://via.placeholder.com/1000x1000'
-						/>
-					</div>
-				</section>
+				<TeamCards />
 
 				<section>
-					<h1>Our Values</h1>
+					<h1>
+						{Translate(localizationKeys.aboutPage.pageSectionValues.title)}
+					</h1>
 					<div className='container'>
-						<p>
-							Test value lalalala bla blu blop touptup babababa bububub
-							bibibibibi aaaaaaaaaaa yoyoyoyoyyyyy
-						</p>
-						<ul>
-							<li>Value 1</li>
-							<li>Value 2</li>
-							<li>Value 3</li>
-						</ul>
+						{Translate(localizationKeys.aboutPage.pageSectionValues.content)}
 					</div>
 				</section>
 
 				<section>
-					<h1>Twitter Feed</h1>
+					<h1>
+						{Translate(localizationKeys.aboutPage.pageSectionTwitterFeed.title)}
+					</h1>
 					<div className='container flex-centered'>
 						<Twitter width='700' handle='felismajorrr' />
 					</div>
@@ -65,3 +47,37 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
+const TeamCards = () => {
+	const cards = [
+		{
+			name: localizationKeys.aboutPage.pageSectionTeam.teamcards[0].name,
+			job: localizationKeys.aboutPage.pageSectionTeam.teamcards[0].job,
+			handle: localizationKeys.aboutPage.pageSectionTeam.teamcards[0].handle,
+			portraitUrl: 'https://via.placeholder.com/1000',
+		},
+		{
+			name: localizationKeys.aboutPage.pageSectionTeam.teamcards[1].name,
+			job: localizationKeys.aboutPage.pageSectionTeam.teamcards[1].job,
+			handle: localizationKeys.aboutPage.pageSectionTeam.teamcards[1].handle,
+			portraitUrl: 'https://via.placeholder.com/1000',
+		},
+	];
+
+	return (
+		<section>
+			<h1>{localizationKeys.aboutPage.pageSectionTeam.title}</h1>
+			<div className='container flex-centered'>
+				{cards.map((x, index) => (
+					<TeamCard
+						name={Translate(x.name)}
+						jobTitle={Translate(x.job)}
+						handle={Translate(x.handle)}
+						portraitUrl={x.portraitUrl}
+						key={index}
+					/>
+				))}
+			</div>
+		</section>
+	);
+};

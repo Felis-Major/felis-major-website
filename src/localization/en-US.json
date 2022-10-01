@@ -1,15 +1,15 @@
 {
-  "nav_AboutUs": "About Us",
-  "nav_OurServices": "Our Services",
-  "nav_Wastern": "Wastern",
-  "nav_Press": "Press",
-  "nav_ContactUs": "Contact Us",
-  "pageTitle_aboutUs": "About Us",
-  "pageSubtitle_aboutUs": "About us",
-  "pageTitle_OurServices": "Our Services",
-  "pageTitle_Wastern": "Wastern",
-  "pageTitle_Press": "Press",
-  "pageTitle_ContactUs": "Contact Us",
-  "pageSection_team": "The Team",
-  "pageSection_values": "Our Values"
+	"aboutPage_pageTaitle": "About Us",
+	"nav_OurServices": "Our Services",
+	"nav_Wastern": "Wastern",
+	"nav_Press": "Press",
+	"nav_ContactUs": "Contact Us",
+	"pageTitle_aboutUs": "About Us",
+	"pageSubtitle_aboutUs": "About us",
+	"pageTitle_OurServices": "Our Services",
+	"pageTitle_Wastern": "Wastern",
+	"pageTitle_Press": "Press",
+	"pageTitle_ContactUs": "Contact Us",
+	"pageSection_team": "The Team",
+	"pageSection_values": "Our Values"
 }

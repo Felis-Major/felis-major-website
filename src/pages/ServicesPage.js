@@ -4,6 +4,8 @@ import Footer from '../components/navigation/Footer';
 import PageHeader from '../components/layout/PageHeader';
 import ServiceCard from '../components/content/cards/ServiceCard';
 import { Link } from 'react-router-dom';
+import localizationKeys from '../localization/localization-keys';
+import Translate from '../localization/Translate';
 
 const ServicesPage = () => {
 	return (
@@ -12,13 +14,15 @@ const ServicesPage = () => {
 
 			<div className='content'>
 				<PageHeader
-					title='Our Services'
-					subtitle='Our Services'
+					title={Translate(localizationKeys.servicesPage.pageTitle)}
+					subtitle={Translate(localizationKeys.servicesPage.pageSubtitle)}
 					imageUrl='https://getwallpapers.com/wallpaper/full/1/d/e/255149.jpg'
 				/>
 
 				<section>
-					<h1>Services</h1>
+					<h1>
+						{Translate(localizationKeys.servicesPage.pageSectionServices.title)}
+					</h1>
 					<div className='container flex-centered'>
 						<ServiceCard
 							imageUrl='https://via.placeholder.com/250x70'
@@ -41,13 +45,18 @@ const ServicesPage = () => {
 					</div>
 					<div className='container flex-centered'>
 						<Link className='button' to='/contact'>
-							Contact Us
+							{Translate(
+								localizationKeys.servicesPage.pageSectionServices
+									.contactUsButton
+							)}
 						</Link>
 					</div>
 				</section>
 
 				<section>
-					<h1>Clients</h1>
+					<h1>
+						{Translate(localizationKeys.servicesPage.pageSectionClients.title)}
+					</h1>
 					<div className='container flex-centered'>
 						<img src='https://via.placeholder.com/250x70' />
 						<img src='https://via.placeholder.com/250x70' />

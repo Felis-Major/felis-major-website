@@ -9,6 +9,7 @@ import twitterNormal from '../../imgs/logos/socials/twitter-normal.png';
 import instagramNormal from '../../imgs/logos/socials/instagram-normal.png';
 import NavLink from './links/NavLink';
 import links from './links/links';
+import Translate from '../../localization/Translate';
 
 /* =======================
  * Main
@@ -60,7 +61,7 @@ const LeftSection = () => {
 			<div className={linksClass} id={showLinks ? hiddenID : ''}>
 				{links.map((link, index) => (
 					<NavLink className={linkClass} target={link.target} key={index}>
-						{link.content}
+						{Translate(link.content)}
 					</NavLink>
 				))}
 				<SocialLinks />

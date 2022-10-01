@@ -1,10 +1,10 @@
-import React from 'react';
+import localizationKeys from '../../../localization/localization-keys';
 
 const links = [
-	{ target: '/about', content: 'About Us' },
-	{ target: '/services', content: 'Our Services' },
-	{ target: '/wastern', content: 'Wastern' },
-	{ target: '/contact', content: 'Contact Us' },
+	{ target: '/about', content: localizationKeys.navLinks.aboutUs },
+	{ target: '/services', content: localizationKeys.navLinks.ourServices },
+	{ target: '/wastern', content: localizationKeys.navLinks.wastern },
+	{ target: '/contact', content: localizationKeys.navLinks.contactUs },
 ];
 
 export default links;

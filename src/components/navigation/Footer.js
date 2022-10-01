@@ -5,6 +5,7 @@
 import NavLink from './links/NavLink';
 import style from './Footer.module.scss';
 import links from './links/links';
+import Translate from '../../localization/Translate';
 
 /* =======================
  * Main
@@ -42,7 +43,7 @@ const Links = () => {
 		<div className={linksClass}>
 			{links.map((link, index) => (
 				<NavLink className={linkClass} target={link.target} key={index}>
-					{link.content}
+					{Translate(link.content)}
 				</NavLink>
 			))}
 		</div>
