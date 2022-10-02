@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/felis-major-website/static/css/main.da7dc7bc.css",
+    "main.css": "/felis-major-website/static/css/main.58467e04.css",
     "main.js": "/felis-major-website/static/js/main.88bc1f0b.js",
     "static/media/MPLUSRounded1c-Black.ttf": "/felis-major-website/static/media/MPLUSRounded1c-Black.82278fcd8098e1676253.ttf",
     "static/media/wastern.png": "/felis-major-website/static/media/wastern.5f02d66cad54a7c1d14a.png",
@@ -23,11 +23,11 @@
     "static/media/prog.png": "/felis-major-website/static/media/prog.9d2abb6139500c7e715e.png",
     "static/media/twitter-normal.png": "/felis-major-website/static/media/twitter-normal.bfeff16b6c3cc28875b3.png",
     "index.html": "/felis-major-website/index.html",
-    "main.da7dc7bc.css.map": "/felis-major-website/static/css/main.da7dc7bc.css.map",
+    "main.58467e04.css.map": "/felis-major-website/static/css/main.58467e04.css.map",
     "main.88bc1f0b.js.map": "/felis-major-website/static/js/main.88bc1f0b.js.map"
   },
   "entrypoints": [
-    "static/css/main.da7dc7bc.css",
+    "static/css/main.58467e04.css",
     "static/js/main.88bc1f0b.js"
   ]
 }
