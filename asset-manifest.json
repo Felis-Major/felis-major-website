@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/felis-major-website/static/css/main.e870d109.css",
-    "main.js": "/felis-major-website/static/js/main.5b4c1d1e.js",
+    "main.css": "/felis-major-website/static/css/main.8df3f90d.css",
+    "main.js": "/felis-major-website/static/js/main.61b980fd.js",
     "static/media/fm-logo-wide.png": "/felis-major-website/static/media/fm-logo-wide.63af2e9237ef73dc62f3.png",
-    "static/media/instagram-hover.png": "/felis-major-website/static/media/instagram-hover.7618c0fff7b3af6bac2a.png",
-    "static/media/instagram-normal.png": "/felis-major-website/static/media/instagram-normal.bb8a77bfaa323012e852.png",
+    "static/media/instagram-normal.png": "/felis-major-website/static/media/instagram-normal.c95815ae7dbae7514aa8.png",
     "static/media/barlow-bold.ttf": "/felis-major-website/static/media/barlow-bold.0cb1ab864072bf9e0991.ttf",
     "static/media/barlow-regular.ttf": "/felis-major-website/static/media/barlow-regular.e7eb634d040a6f384033.ttf",
     "static/media/bodo-amat.ttf": "/felis-major-website/static/media/bodo-amat.5b24bf8d17391a553e0a.ttf",
+    "static/media/twitter-normal.png": "/felis-major-website/static/media/twitter-normal.bfeff16b6c3cc28875b3.png",
     "index.html": "/felis-major-website/index.html",
-    "main.e870d109.css.map": "/felis-major-website/static/css/main.e870d109.css.map",
-    "main.5b4c1d1e.js.map": "/felis-major-website/static/js/main.5b4c1d1e.js.map"
+    "main.8df3f90d.css.map": "/felis-major-website/static/css/main.8df3f90d.css.map",
+    "main.61b980fd.js.map": "/felis-major-website/static/js/main.61b980fd.js.map"
   },
   "entrypoints": [
-    "static/css/main.e870d109.css",
-    "static/js/main.5b4c1d1e.js"
+    "static/css/main.8df3f90d.css",
+    "static/js/main.61b980fd.js"
   ]
 }
