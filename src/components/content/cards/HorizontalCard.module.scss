@@ -32,7 +32,10 @@
 }
 
 .align-left > .content > * {
-	text-align: justify;
+	/* Media Query: Phones */
+	@media screen and (min-width: $mobile-max-width) {
+		text-align: justify;
+	}
 }
 
 .align-right {
@@ -46,7 +49,10 @@
 }
 
 .align-right > .content > * {
-	text-align: justify;
+	/* Media Query: Phones */
+	@media screen and (min-width: $mobile-max-width) {
+		text-align: justify;
+	}
 
 	/* @Media Query: Phones */
 	@media screen and (max-width: $mobile-max-width) {
