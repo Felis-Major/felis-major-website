@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/felis-major-website/static/css/main.8df3f90d.css",
-    "main.js": "/felis-major-website/static/js/main.61b980fd.js",
+    "main.js": "/felis-major-website/static/js/main.d8ef7ff3.js",
     "static/media/fm-logo-wide.png": "/felis-major-website/static/media/fm-logo-wide.63af2e9237ef73dc62f3.png",
     "static/media/instagram-normal.png": "/felis-major-website/static/media/instagram-normal.c95815ae7dbae7514aa8.png",
     "static/media/barlow-bold.ttf": "/felis-major-website/static/media/barlow-bold.0cb1ab864072bf9e0991.ttf",
@@ -10,10 +10,10 @@
     "static/media/twitter-normal.png": "/felis-major-website/static/media/twitter-normal.bfeff16b6c3cc28875b3.png",
     "index.html": "/felis-major-website/index.html",
     "main.8df3f90d.css.map": "/felis-major-website/static/css/main.8df3f90d.css.map",
-    "main.61b980fd.js.map": "/felis-major-website/static/js/main.61b980fd.js.map"
+    "main.d8ef7ff3.js.map": "/felis-major-website/static/js/main.d8ef7ff3.js.map"
   },
   "entrypoints": [
     "static/css/main.8df3f90d.css",
-    "static/js/main.61b980fd.js"
+    "static/js/main.d8ef7ff3.js"
   ]
 }
