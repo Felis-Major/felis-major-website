@@ -6,6 +6,8 @@ import NavLink from './links/NavLink';
 import style from './Footer.module.scss';
 import links from './links/links';
 import Translate from '../../localization/Translate';
+import localizationKeys from '../../localization/localization-keys';
+import i18n from '../../localization/i18n';
 
 /* =======================
  * Main
@@ -61,9 +63,14 @@ const LanguageSelection = () => {
 
 	return (
 		<div className={languageSelectionClass}>
-			<select className='button' name='language'>
-				<option value='en'>English</option>
-				<option value='fr'>Français</option>
+			<select
+				className='button'
+				name='language'
+				onChange={(e) => i18n.changeLanguage(e.target.value)}
+				value={i18n.language}
+			>
+				<option value='en'>{Translate(localizationKeys.language.en)}</option>
+				<option value='fr'>{Translate(localizationKeys.language.fr)}</option>
 			</select>
 		</div>
 	);

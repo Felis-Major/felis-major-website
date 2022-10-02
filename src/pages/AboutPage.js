@@ -66,7 +66,7 @@ const TeamCards = () => {
 
 	return (
 		<section>
-			<h1>{localizationKeys.aboutPage.pageSectionTeam.title}</h1>
+			<h1>{Translate(localizationKeys.aboutPage.pageSectionTeam.title)}</h1>
 			<div className='container flex-centered'>
 				{cards.map((x, index) => (
 					<TeamCard

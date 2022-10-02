@@ -26,21 +26,75 @@ const ServicesPage = () => {
 					<div className='container flex-centered'>
 						<ServiceCard
 							imageUrl='https://via.placeholder.com/250x70'
-							title='prog'
-							description='desc'
-							services={['test', 'aaaa', 'aaaaaa']}
+							title={Translate(
+								localizationKeys.servicesPage.pageSectionServices.cards[0].title
+							)}
+							description={Translate(
+								localizationKeys.servicesPage.pageSectionServices.cards[0]
+									.description
+							)}
+							services={[
+								Translate(
+									localizationKeys.servicesPage.pageSectionServices.cards[0]
+										.services[0]
+								),
+								Translate(
+									localizationKeys.servicesPage.pageSectionServices.cards[0]
+										.services[1]
+								),
+								Translate(
+									localizationKeys.servicesPage.pageSectionServices.cards[0]
+										.services[2]
+								),
+							]}
 						/>
 						<ServiceCard
 							imageUrl='https://via.placeholder.com/250x70'
-							title='design'
-							description='desc'
-							services={['test', 'aaaa', 'aaaaaa']}
+							title={Translate(
+								localizationKeys.servicesPage.pageSectionServices.cards[1].title
+							)}
+							description={Translate(
+								localizationKeys.servicesPage.pageSectionServices.cards[1]
+									.description
+							)}
+							services={[
+								Translate(
+									localizationKeys.servicesPage.pageSectionServices.cards[1]
+										.services[0]
+								),
+								Translate(
+									localizationKeys.servicesPage.pageSectionServices.cards[1]
+										.services[1]
+								),
+								Translate(
+									localizationKeys.servicesPage.pageSectionServices.cards[1]
+										.services[2]
+								),
+							]}
 						/>
 						<ServiceCard
 							imageUrl='https://via.placeholder.com/250x70'
-							title='marketing'
-							description='desc'
-							services={['test', 'aaaa', 'aaaaaa']}
+							title={Translate(
+								localizationKeys.servicesPage.pageSectionServices.cards[2].title
+							)}
+							description={Translate(
+								localizationKeys.servicesPage.pageSectionServices.cards[2]
+									.description
+							)}
+							services={[
+								Translate(
+									localizationKeys.servicesPage.pageSectionServices.cards[2]
+										.services[0]
+								),
+								Translate(
+									localizationKeys.servicesPage.pageSectionServices.cards[2]
+										.services[1]
+								),
+								Translate(
+									localizationKeys.servicesPage.pageSectionServices.cards[2]
+										.services[2]
+								),
+							]}
 						/>
 					</div>
 					<div className='container flex-centered'>
