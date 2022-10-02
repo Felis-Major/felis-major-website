@@ -6,26 +6,45 @@ import ServiceCard from '../components/content/cards/ServiceCard';
 import { Link } from 'react-router-dom';
 import localizationKeys from '../localization/localization-keys';
 import Translate from '../localization/Translate';
+import ProgServiceCardImage from '../imgs/services/prog.png';
+import DesignServiceCardImage from '../imgs/services/design.png';
+import ComServiceCardImage from '../imgs/services/com.png';
+import TopBanner from '../imgs/banners/services.png';
 
 const ServicesPage = () => {
+	const scrollToTop = () => {
+		window.scrollTo(0, 0);
+	};
+	scrollToTop();
 	return (
 		<>
 			<Header />
 
-			<div className='content'>
+			<div className='content services'>
 				<PageHeader
 					title={Translate(localizationKeys.servicesPage.pageTitle)}
-					subtitle={Translate(localizationKeys.servicesPage.pageSubtitle)}
-					imageUrl='https://getwallpapers.com/wallpaper/full/1/d/e/255149.jpg'
+					// subtitle={Translate(localizationKeys.servicesPage.pageSubtitle)}
+					imageUrl={TopBanner}
 				/>
+				<section className='page-content'>
+					<div className='container flex-centered'>
+						<div className='card-wide light-background'>
+							<p>
+								{Translate(
+									localizationKeys.servicesPage.pageSectionIntro.content
+								)}
+							</p>
+						</div>
+					</div>
+				</section>
 
-				<section>
+				<section className='page-content'>
 					<h1>
-						{Translate(localizationKeys.servicesPage.pageSectionServices.title)}
+						{/* {Translate(localizationKeys.servicesPage.pageSectionServices.title)} */}
 					</h1>
 					<div className='container flex-centered'>
 						<ServiceCard
-							imageUrl='https://via.placeholder.com/250x70'
+							imageUrl={DesignServiceCardImage}
 							title={Translate(
 								localizationKeys.servicesPage.pageSectionServices.cards[0].title
 							)}
@@ -42,14 +61,14 @@ const ServicesPage = () => {
 									localizationKeys.servicesPage.pageSectionServices.cards[0]
 										.services[1]
 								),
-								Translate(
-									localizationKeys.servicesPage.pageSectionServices.cards[0]
-										.services[2]
-								),
+								// Translate(
+								// 	localizationKeys.servicesPage.pageSectionServices.cards[0]
+								// 		.services[2]
+								// ),
 							]}
 						/>
 						<ServiceCard
-							imageUrl='https://via.placeholder.com/250x70'
+							imageUrl={ProgServiceCardImage}
 							title={Translate(
 								localizationKeys.servicesPage.pageSectionServices.cards[1].title
 							)}
@@ -73,7 +92,7 @@ const ServicesPage = () => {
 							]}
 						/>
 						<ServiceCard
-							imageUrl='https://via.placeholder.com/250x70'
+							imageUrl={ComServiceCardImage}
 							title={Translate(
 								localizationKeys.servicesPage.pageSectionServices.cards[2].title
 							)}
@@ -90,10 +109,10 @@ const ServicesPage = () => {
 									localizationKeys.servicesPage.pageSectionServices.cards[2]
 										.services[1]
 								),
-								Translate(
-									localizationKeys.servicesPage.pageSectionServices.cards[2]
-										.services[2]
-								),
+								// Translate(
+								// 	localizationKeys.servicesPage.pageSectionServices.cards[2]
+								// 		.services[2]
+								// ),
 							]}
 						/>
 					</div>
@@ -106,18 +125,6 @@ const ServicesPage = () => {
 						</Link>
 					</div>
 				</section>
-
-				<section>
-					<h1>
-						{Translate(localizationKeys.servicesPage.pageSectionClients.title)}
-					</h1>
-					<div className='container flex-centered'>
-						<img src='https://via.placeholder.com/250x70' />
-						<img src='https://via.placeholder.com/250x70' />
-						<img src='https://via.placeholder.com/250x70' />
-						<img src='https://via.placeholder.com/250x70' />
-					</div>
-				</section>
 			</div>
 
 			<Footer />
@@ -126,3 +133,16 @@ const ServicesPage = () => {
 };
 
 export default ServicesPage;
+/*
+<section className='page-content'>
+	<h1>
+		{Translate(localizationKeys.servicesPage.pageSectionClients.title)}
+	</h1>
+	<div className='container flex-centered'>
+		<img src='https://via.placeholder.com/250x70' />
+		<img src='https://via.placeholder.com/250x70' />
+		<img src='https://via.placeholder.com/250x70' />
+		<img src='https://via.placeholder.com/250x70' />
+	</div>
+</section>
+*/

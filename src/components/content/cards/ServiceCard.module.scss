@@ -29,8 +29,8 @@
 .image {
 	margin: 0px;
 	display: block;
-	width: 250px;
-	height: 80px;
+	width: 300px;
+	height: 84px;
 	object-fit: cover;
 	position: relative;
 }
@@ -42,6 +42,7 @@
 
 .description {
 	color: $text-alt-color;
+	margin-bottom: 20px;
 }
 
 .services-container {
@@ -58,7 +59,7 @@
 
 .list-element {
 	display: flex;
-	align-items: center;
+	align-items: top;
 }
 
 .list-element img {

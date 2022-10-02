@@ -5,17 +5,28 @@ import PageHeader from '../components/layout/PageHeader';
 import HorizontalCard from '../components/content/cards/HorizontalCard';
 import Translate from '../localization/Translate';
 import localizationKeys from '../localization/localization-keys';
+import TopBanner from '../imgs/banners/wastern.png';
+
+import ksp1 from '../imgs/ksps/ksp1.png';
+import ksp2 from '../imgs/ksps/ksp2.png';
+import ksp3 from '../imgs/ksps/ksp3.png';
+import ksp4 from '../imgs/ksps/ksp4.png';
+import ksp5 from '../imgs/ksps/ksp5.png';
 
 const WasternPage = () => {
+	const scrollToTop = () => {
+		window.scrollTo(0, 0);
+	};
+	scrollToTop();
 	return (
 		<>
 			<Header />
 
-			<div className='content'>
+			<div className='content wastern'>
 				<PageHeader
 					title={Translate(localizationKeys.wasternPage.pageTitle)}
-					subtitle={Translate(localizationKeys.wasternPage.pageSubtitle)}
-					imageUrl='https://wallpaperheart.com/wp-content/uploads/2018/08/hd-wallpaper-1366x768-11.jpg'
+					// subtitle={Translate(localizationKeys.wasternPage.pageSubtitle)}
+					imageUrl={TopBanner}
 				/>
 				<Pitch />
 				<KSPs />
@@ -31,7 +42,7 @@ export default WasternPage;
 
 const Pitch = () => {
 	return (
-		<section>
+		<section className='page-content'>
 			<h1>{Translate(localizationKeys.wasternPage.pageSectionPitch.title)}</h1>
 			<div className='container flex-centered flex-column'>
 				<div className='card-wide dark-background'>
@@ -62,7 +73,7 @@ const KSPs = () => {
 			content: Translate(
 				localizationKeys.wasternPage.pageSectionKSPs.ksps[0].content
 			),
-			imageUrl: 'https://via.placeholder.com/1000x1000',
+			imageUrl: ksp1,
 		},
 		{
 			title: Translate(
@@ -71,7 +82,7 @@ const KSPs = () => {
 			content: Translate(
 				localizationKeys.wasternPage.pageSectionKSPs.ksps[1].content
 			),
-			imageUrl: 'https://via.placeholder.com/1000x1000',
+			imageUrl: ksp2,
 		},
 		{
 			title: Translate(
@@ -80,7 +91,7 @@ const KSPs = () => {
 			content: Translate(
 				localizationKeys.wasternPage.pageSectionKSPs.ksps[2].content
 			),
-			imageUrl: 'https://via.placeholder.com/1000x1000',
+			imageUrl: ksp3,
 		},
 		{
 			title: Translate(
@@ -89,7 +100,7 @@ const KSPs = () => {
 			content: Translate(
 				localizationKeys.wasternPage.pageSectionKSPs.ksps[3].content
 			),
-			imageUrl: 'https://via.placeholder.com/1000x1000',
+			imageUrl: ksp4,
 		},
 		{
 			title: Translate(
@@ -98,13 +109,13 @@ const KSPs = () => {
 			content: Translate(
 				localizationKeys.wasternPage.pageSectionKSPs.ksps[4].content
 			),
-			imageUrl: 'https://via.placeholder.com/1000x1000',
+			imageUrl: ksp5,
 		},
 	];
 
 	return (
-		<section>
-			<h1>{Translate(localizationKeys.wasternPage.pageSectionKSPs.title)}</h1>
+		<section className='page-content'>
+			{/* <h1>{Translate(localizationKeys.wasternPage.pageSectionKSPs.title)}</h1> */}
 			<div className='container flex-centered'>
 				{ksps.map((x, index) => (
 					<HorizontalCard
@@ -112,7 +123,7 @@ const KSPs = () => {
 						align={index % 2 == 0 ? 'align-left' : 'align-right'}
 						key={index}
 					>
-						<h2>{x.title}</h2>
+						<h2 style={{ textAlign: 'left' }}>{x.title}</h2>
 						<p>{x.content}</p>
 					</HorizontalCard>
 				))}
@@ -163,14 +174,22 @@ const FAQ = () => {
 				localizationKeys.wasternPage.pageSectionFAQ.questions[4].content
 			),
 		},
+		{
+			title: Translate(
+				localizationKeys.wasternPage.pageSectionFAQ.questions[5].title
+			),
+			content: Translate(
+				localizationKeys.wasternPage.pageSectionFAQ.questions[5].content
+			),
+		},
 	];
 
 	return (
-		<section>
+		<section className='page-content'>
 			<h1>{Translate(localizationKeys.wasternPage.pageSectionFAQ.title)}</h1>
 			<div className='container flex-centered flex-column'>
 				{questions.map((x, index) => (
-					<div className='card-wide light-background' key={index}>
+					<div className='card-wide dark-background' key={index}>
 						<p>
 							<b>{x.title}</b>
 						</p>

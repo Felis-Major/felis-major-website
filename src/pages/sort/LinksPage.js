@@ -23,22 +23,22 @@ function ContactPage() {
 	return (
 		<>
 			<PageBlock
-				height="350"
-				backgroundUrl="https://pbs.twimg.com/media/FOD_yWRVUAUi4jD?format=jpg&name=medium"
+				height='350'
+				backgroundUrl='https://pbs.twimg.com/media/FOD_yWRVUAUi4jD?format=jpg&name=medium'
 			/>
 
 			<ContentContainer>
-				<CenteredContentContainer direction="column">
+				<CenteredContentContainer direction='column'>
 					<div className={linksPageStyle['social-links-container']}>
 						<ImageLink
-							link="#"
-							size="48"
+							link='#'
+							size='48'
 							imgNormal={TwitterNormal}
 							imgHovered={TwitterHover}
 						/>
 						<ImageLink
-							link="#"
-							size="48"
+							link='#'
+							size='48'
 							imgNormal={InstagramNormal}
 							imgHovered={InstagramHover}
 						/>

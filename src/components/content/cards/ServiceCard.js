@@ -3,6 +3,7 @@
  * ======================= */
 
 import style from './ServiceCard.module.scss';
+import star from '../../../imgs/elements/star.png';
 
 /* =======================
  * Main
@@ -27,7 +28,7 @@ const ServiceCard = (props) => {
 					<ul className={listContainerClass}>
 						{props.services.map((x, index) => (
 							<Service key={index}>
-								<img src='https://via.placeholder.com/16x16' />
+								<img src={star} />
 								<p>{x}</p>
 							</Service>
 						))}

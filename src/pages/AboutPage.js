@@ -7,31 +7,54 @@ import Twitter from '../components/content/embed/Twitter';
 import PageHeader from '../components/layout/PageHeader';
 import localizationKeys from '../localization/localization-keys';
 import Translate from '../localization/Translate';
+import TopBanner from '../imgs/banners/about.png';
+import Card1Picture from '../imgs/portraits/1.png';
+import Card2Picture from '../imgs/portraits/2.png';
 
 const AboutPage = () => {
+	const scrollToTop = () => {
+		window.scrollTo(0, 0);
+	};
+	scrollToTop();
 	return (
 		<>
 			<Header />
 
-			<div className='content'>
+			<div className='content about'>
 				<PageHeader
 					title={Translate(localizationKeys.aboutPage.pageTitle)}
-					subtitle={Translate(localizationKeys.aboutPage.pageSubtitle)}
-					imageUrl='https://pbs.twimg.com/profile_banners/1353208432032178176/1662896389/1500x500'
+					// subtitle={Translate(localizationKeys.aboutPage.pageSubtitle)}
+					imageUrl={TopBanner}
 				/>
 
-				<TeamCards />
-
-				<section>
-					<h1>
-						{Translate(localizationKeys.aboutPage.pageSectionValues.title)}
-					</h1>
-					<div className='container'>
-						{Translate(localizationKeys.aboutPage.pageSectionValues.content)}
+				<section className='page-content'>
+					<div className='container flex-centered'>
+						<div className='card-wide light-background'>
+							<p>
+								{Translate(localizationKeys.aboutPage.pageSectionIntro.content)}
+							</p>
+						</div>
 					</div>
 				</section>
 
-				<section>
+				<TeamCards />
+
+				<section className='page-content'>
+					<h1>
+						{Translate(localizationKeys.aboutPage.pageSectionValues.title)}
+					</h1>
+					<div className='container flex-centered'>
+						<div className='card-wide light-background'>
+							<p>
+								{Translate(
+									localizationKeys.aboutPage.pageSectionValues.content
+								)}
+							</p>
+						</div>
+					</div>
+				</section>
+
+				<section className='page-content'>
 					<h1>
 						{Translate(localizationKeys.aboutPage.pageSectionTwitterFeed.title)}
 					</h1>
@@ -53,26 +76,26 @@ const TeamCards = () => {
 		{
 			name: localizationKeys.aboutPage.pageSectionTeam.teamcards[0].name,
 			job: localizationKeys.aboutPage.pageSectionTeam.teamcards[0].job,
-			handle: localizationKeys.aboutPage.pageSectionTeam.teamcards[0].handle,
-			portraitUrl: 'https://via.placeholder.com/1000',
+			handle: 'suzclemente',
+			portraitUrl: Card2Picture,
 		},
 		{
 			name: localizationKeys.aboutPage.pageSectionTeam.teamcards[1].name,
 			job: localizationKeys.aboutPage.pageSectionTeam.teamcards[1].job,
-			handle: localizationKeys.aboutPage.pageSectionTeam.teamcards[1].handle,
-			portraitUrl: 'https://via.placeholder.com/1000',
+			handle: 'rsedilber',
+			portraitUrl: Card1Picture,
 		},
 	];
 
 	return (
-		<section>
+		<section className='page-content'>
 			<h1>{Translate(localizationKeys.aboutPage.pageSectionTeam.title)}</h1>
 			<div className='container flex-centered'>
 				{cards.map((x, index) => (
 					<TeamCard
 						name={Translate(x.name)}
 						jobTitle={Translate(x.job)}
-						handle={Translate(x.handle)}
+						handle={x.handle}
 						portraitUrl={x.portraitUrl}
 						key={index}
 					/>

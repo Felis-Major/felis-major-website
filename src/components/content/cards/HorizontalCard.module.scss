@@ -32,7 +32,7 @@
 }
 
 .align-left > .content > * {
-	text-align: left;
+	text-align: justify;
 }
 
 .align-right {
@@ -46,7 +46,7 @@
 }
 
 .align-right > .content > * {
-	text-align: right;
+	text-align: justify;
 
 	/* @Media Query: Phones */
 	@media screen and (max-width: $mobile-max-width) {

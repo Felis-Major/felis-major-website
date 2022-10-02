@@ -19,6 +19,11 @@ const localizationKeys = {
 		pageTitle: 'aboutPage_pageTitle',
 		pageSubtitle: 'aboutPage_pageSubtitle',
 
+		// Intro
+		pageSectionIntro: {
+			content: 'aboutPage_pageSectionIntro_content',
+		},
+
 		// Team
 		pageSectionTeam: {
 			title: 'aboutPage_pageSectionTeam_title',
@@ -53,6 +58,11 @@ const localizationKeys = {
 		// Header
 		pageTitle: 'servicesPage_pageTitle',
 		pageSubtitle: 'servicesPage_pageSubtitle',
+
+		// Intro
+		pageSectionIntro: {
+			content: 'servicesPage_pageSectionIntro_content',
+		},
 
 		// Services
 		pageSectionServices: {
@@ -160,8 +170,20 @@ const localizationKeys = {
 					title: 'wasternPage_pageSectionFAQ_q5_title',
 					content: 'wasternPage_pageSectionFAQ_q5_content',
 				},
+				{
+					title: 'wasternPage_pageSectionFAQ_q6_title',
+					content: 'wasternPage_pageSectionFAQ_q6_content',
+				},
 			],
 		},
+	},
+
+	// Contact Page
+	contactPage: {
+		// Header
+		pageTitle: 'contactPage_pageTitle',
+		pageSubtitle: 'contactPage_pageSubtitle',
+		pageStatus: 'contactPage_wip',
 	},
 };
 

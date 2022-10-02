@@ -13,21 +13,21 @@
 	font-family: 'Berlin';
 	font-style: normal;
 	font-weight: normal;
-	src: url('fonts/barlow-regular.ttf');
+	src: url('fonts/Rubik-Regular.ttf');
 }
 
 @font-face {
 	font-family: 'Berlin';
 	font-style: normal;
 	font-weight: bold;
-	src: url('fonts/barlow-bold.ttf');
+	src: url('fonts/Rubik-Bold.ttf');
 }
 
 @font-face {
-	font-family: 'Fontnia Ineth';
+	font-family: 'MPlus';
 	font-style: normal;
-	font-weight: lighter;
-	src: url('fonts/bodo-amat.ttf');
+	font-weight: normal;
+	src: url('fonts/MPLUSRounded1c-Black.ttf');
 }
 
 /* =======================
@@ -52,6 +52,29 @@ body {
 
 .content {
 	background-color: $default-background-color;
+	padding-bottom: 50px;
+}
+
+.about {
+	background-image: url('imgs/backgrounds/about.png');
+}
+
+.services {
+	background-image: url('imgs/backgrounds/services.png');
+}
+
+.wastern {
+	background-image: url('imgs/backgrounds/wastern.png');
+}
+
+.page-content {
+	margin-left: 50px;
+	margin-right: 50px;
+
+	/* Media Query: Phones */
+	@media screen and (max-width: $mobile-max-width) {
+		margin: 0px;
+	}
 }
 
 /* =======================
@@ -78,7 +101,7 @@ h5,
 h6 {
 	color: $text-title-color;
 	text-align: left;
-
+	font-family: 'MPlus';
 	/* Media Query: Phones */
 	@media screen and (max-width: $mobile-max-width) {
 		text-align: center;
@@ -104,13 +127,14 @@ ul {
 /* Cards */
 .card {
 	border-radius: 10px;
-	padding: 10px;
+	padding: 20px;
 }
 
 .card-wide {
 	@extend .card;
 	width: 100%;
 	max-width: 1000px;
+	text-align: justify;
 }
 
 .dark-background {
