@@ -1,0 +1,230 @@
+/* =======================
+ * Imports
+ * ======================= */
+
+@import 'scss-configs/colors.scss';
+@import 'scss-configs/breakpoints.scss';
+
+/* =======================
+ * Fonts
+ * ======================= */
+
+@font-face {
+	font-family: 'Berlin';
+	font-style: normal;
+	font-weight: normal;
+	src: url('fonts/Rubik-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Berlin';
+	font-style: normal;
+	font-weight: bold;
+	src: url('fonts/Rubik-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'MPlus';
+	font-style: normal;
+	font-weight: normal;
+	src: url('fonts/MPLUSRounded1c-Black.ttf');
+}
+
+/* =======================
+ * Main
+ * ======================= */
+
+:root {
+	font-size: 20px;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Berlin';
+	color: $text-default-color;
+}
+
+body {
+	background-color: $dark-background-color;
+}
+
+.content {
+	background-color: $default-background-color;
+	padding-bottom: 50px;
+}
+
+.about {
+	background-image: url('imgs/backgrounds/about.png');
+}
+
+.services {
+	background-image: url('imgs/backgrounds/services.png');
+}
+
+.wastern {
+	background-image: url('imgs/backgrounds/wastern.png');
+}
+
+.page-content {
+	margin-left: 50px;
+	margin-right: 50px;
+
+	/* Media Query: Phones */
+	@media screen and (max-width: $mobile-max-width) {
+		margin: 0px;
+	}
+}
+
+/* =======================
+ * Global default styling
+ * ======================= */
+
+/* Links */
+a {
+	text-decoration: none;
+	color: $link-default-color;
+	font-weight: bold;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* Titles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $text-title-color;
+	text-align: left;
+	font-family: 'MPlus';
+	/* Media Query: Phones */
+	@media screen and (max-width: $mobile-max-width) {
+		text-align: center;
+	}
+}
+
+h1 {
+	font-size: 3rem;
+	margin: 10px;
+
+	/* Media Query: Phones */
+	@media screen and (max-width: $mobile-max-width) {
+		font-size: 2rem;
+	}
+}
+
+/* Text */
+
+ul {
+	list-style-position: inside;
+}
+
+/* Cards */
+.card {
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.card-wide {
+	@extend .card;
+	width: 100%;
+	max-width: 1000px;
+	text-align: justify;
+}
+
+.dark-background {
+	background-color: $dark-background-color;
+}
+
+.light-background {
+	background-color: #8347d3;
+}
+
+.container {
+	padding: 20px;
+}
+
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.flex-column {
+	flex-direction: column;
+}
+
+.flex-centered {
+	@extend .flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.flex-left {
+	@extend .flex;
+	justify-content: left;
+}
+
+.flex-right {
+	@extend .flex;
+	justify-content: right;
+}
+
+/* Form Elements */
+
+.form-element {
+	font-size: 1rem;
+	padding: 15px;
+	border: none;
+	border-radius: 10px;
+	color: $text-default-color;
+	font-weight: normal;
+}
+
+.form-element:hover {
+	text-decoration: none;
+}
+
+.button {
+	@extend .form-element;
+	background-color: $button-background-color__normal;
+	text-align: center;
+}
+
+.button:hover {
+	background-color: $button-background-color__hover;
+}
+
+.text-box {
+	@extend .form-element;
+	background-color: $textbox-background-color__normal;
+	border: 2px solid $textbox-background-color__hover;
+}
+
+.text-box:hover {
+	background-color: $textbox-background-color__hover;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	width: 100%;
+	max-width: 700px;
+	margin: auto;
+}
+
+form > * {
+	width: 100%;
+}
+
+form > *[type='submit'] {
+	min-width: fit-content !important;
+	width: 70% !important;
+}

@@ -14,7 +14,7 @@ i18n.init({
 		fr: { translation: translationFR },
 	},
 	lng: 'fr',
-	fallbackLng: 'en',
+	fallbackLng: 'fr',
 	interpolation: { escapeValue: false },
 });
 

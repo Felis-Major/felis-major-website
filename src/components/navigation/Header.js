@@ -1,127 +1,108 @@
-import headerStyle from './Header.module.css';
-import navlinkStyle from './NavLink.module.css';
-import ImageLink from './elements/ImageLink';
-import React, { useState } from 'react';
-import localizationKeys from '../../localization/localization-keys';
+/* =======================
+ * Imports
+ * ======================= */
 
-// Import resources
-import Logo from '../../imgs/logos/felis-major/felis-major-logo-text.png';
-import TwitterNormal from '../../imgs/logos/socials/twitter-normal.png';
-import TwitterHover from '../../imgs/logos/socials/twitter-hover.png';
-import InstagramNormal from '../../imgs/logos/socials/instagram-normal.png';
-import InstagramHover from '../../imgs/logos/socials/instagram-hover.png';
+import { useState } from 'react';
+import style from './Header.module.scss';
+import fmLogo from '../../imgs/logos/felis-major/fm-logo-wide.png';
+import twitterNormal from '../../imgs/logos/socials/twitter-normal.png';
+import instagramNormal from '../../imgs/logos/socials/instagram-normal.png';
+import NavLink from './links/NavLink';
+import links from './links/links';
+import Translate from '../../localization/Translate';
 
-// Import localization package
-import { useTranslation } from 'react-i18next';
-import { useDeviceTypeChanged } from '../../utilities/useOnWindowResize';
-import { Link, useLocation } from 'react-router-dom';
+/* =======================
+ * Main
+ * ======================= */
 
-export default function Header() {
-	const [device, setDevice] = useState('desktop');
-	useDeviceTypeChanged(setDevice);
+const Header = (props) => {
+	const headerClass = style['header'];
+	let classes = headerClass;
 
-	return (
-		<header className={headerStyle['header']}>
-			<nav className={headerStyle['nav']}>
-				<div className={headerStyle['logo-container']}>
-					<ImageLink
-						link='/'
-						size={{ desktop: 200, tablet: 150, mobile: 100 }[device]}
-						imgNormal={Logo}
-						imgHovered={Logo}
-					/>
-				</div>
-				{
-					{
-						desktop: <NavLinks />,
-						tablet: <NavLinks />,
-						mobile: <MobileMenu />,
-					}[device]
-				}
-			</nav>
-			{
-				{
-					desktop: <SocialLinks />,
-					tablet: <></>,
-					mobile: <></>,
-				}[device]
-			}
-		</header>
-	);
-}
-
-function NavLinks() {
-	const { t } = useTranslation();
-
-	const [device, setDevice] = useState('desktop');
-	useDeviceTypeChanged(setDevice);
-
-	const navLinksClass = headerStyle['nav-links'];
-	const navLinksDeviceClass = headerStyle[`nav-links__${device}`];
-
-	const classes = `${navLinksClass} ${navLinksDeviceClass}`;
-
-	return (
-		<ul className={classes}>
-			<NavLink target='/about'>{t(localizationKeys.navAboutUs)}</NavLink>
-			<NavLink target='/services'>{t(localizationKeys.navServices)}</NavLink>
-			<NavLink target='/wastern'>{t(localizationKeys.navWastern)}</NavLink>
-			<NavLink target='/contact'>{t(localizationKeys.navContactUs)}</NavLink>
-		</ul>
-	);
-}
-
-function NavLink(props) {
-	const [device, setDevice] = useState('desktop');
-	useDeviceTypeChanged(setDevice);
-
-	const location = useLocation();
-	const navLinkClass = navlinkStyle['nav-link'];
-	const navLinkActiveClass = navlinkStyle['nav-link__active'];
-	const navLinkHeaderClass = headerStyle[`nav-link__${device}`];
-
-	let classes = `${navLinkClass} ${navLinkHeaderClass}`;
-
-	if (location.pathname == props.target) {
-		classes += ` ${navLinkActiveClass}`;
+	if (props.className !== undefined) {
+		classes += ` ${props.className}`;
 	}
 
 	return (
-		<li className={classes}>
-			<Link to={props.target}>{props.children}</Link>
-		</li>
+		<header className={classes}>
+			<LeftSection />
+			<RightSection />
+		</header>
 	);
-}
+};
 
-function SocialLinks() {
-	return (
-		<div className={headerStyle['socials-container']}>
-			<ImageLink
-				link='#'
-				size='48'
-				imgNormal={TwitterNormal}
-				imgHovered={TwitterHover}
-			/>
-			<ImageLink
-				link='#'
-				size='48'
-				imgNormal={InstagramNormal}
-				imgHovered={InstagramHover}
-			/>
-		</div>
-	);
-}
+export default Header;
 
-function MobileMenu() {
+/* =======================
+ * Private
+ * ======================= */
+
+const LeftSection = () => {
+	const leftSectionClass = style['left-section'];
+	const logoClass = style['logo'];
+	const menuButtonClass = style['menu-button'];
+	const menuButtonActiveClass = style['menu-button__active'];
+	const linksClass = style['links'];
+	const linkClass = style['link'];
+	const hiddenID = style['hidden'];
+
 	const [showLinks, setShowLinks] = useState(false);
 
 	return (
-		<div>
-			{showLinks ? <NavLinks /> : <></>}
-			<img
+		<div className={leftSectionClass}>
+			<img className={logoClass} src={fmLogo} />
+			<a
 				onClick={() => setShowLinks(!showLinks)}
-				src='https://via.placeholder.com/64x64'
+				className={`${menuButtonClass} ${
+					showLinks ? menuButtonActiveClass : ''
+				}`}
+			></a>
+
+			<div className={linksClass} id={showLinks ? hiddenID : ''}>
+				{links.map((link, index) => (
+					<NavLink className={linkClass} target={link.target} key={index}>
+						{Translate(link.content)}
+					</NavLink>
+				))}
+				<SocialLinks />
+			</div>
+		</div>
+	);
+};
+
+const RightSection = () => {
+	const rightSectionClass = style['right-section'];
+
+	return (
+		<div className={rightSectionClass}>
+			<SocialLinks />
+		</div>
+	);
+};
+
+const SocialLinks = () => {
+	const socialLinksClass = style['social-links'];
+
+	return (
+		<div className={socialLinksClass}>
+			<SocialLink
+				src={twitterNormal}
+				target='https://twitter.com/felismajorrr'
+			/>
+			<SocialLink
+				src={instagramNormal}
+				target='https://instagram.com/felismajorrr?igshid=YmMyMTA2M2Y='
 			/>
 		</div>
 	);
-}
+};
+
+const SocialLink = (props) => {
+	const socialLinkClass = style['social-link'];
+
+	return (
+		<a href={props.target} target='_blank' className={socialLinkClass}>
+			<img src={props.src} />
+		</a>
+	);
+};

@@ -1,0 +1,65 @@
+/* =======================
+ * Imports
+ * ======================= */
+
+@import '../../scss-configs/colors.scss';
+@import '../../scss-configs/breakpoints.scss';
+
+/* =======================
+ * Variables
+ * ======================= */
+
+$footer-min-height: 70px;
+
+/* =======================
+ * Root
+ * ======================= */
+
+.footer {
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: column;
+	padding: 10px 20px 10px 20px;
+	min-height: $footer-min-height;
+	background-color: $dark-background-color;
+}
+
+/* =======================
+ * Top & Bottom Sections
+ * ======================= */
+
+/* Top Section */
+.footer > .top-section {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* Links */
+.footer > .top-section > .links {
+	display: flex;
+
+	/* @Media Query: Phones */
+	@media screen and (max-width: $mobile-max-width) {
+		flex-direction: column;
+	}
+}
+
+.footer > .top-section > .links > .link {
+	display: block;
+	margin: 0px 10px 0px 10px;
+	font-size: 1.2rem;
+	font-family: 'MPlus';
+
+	/* @Media Query: Phones */
+	@media screen and (max-width: $mobile-max-width) {
+		margin: 0px;
+	}
+}
+
+/* Bottom Section */
+.footer > .bottom-section > .copyright {
+	text-align: center;
+	color: #494949;
+	margin: 10px 0px 0px 0px;
+}
