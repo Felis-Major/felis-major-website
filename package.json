@@ -1,6 +1,6 @@
 {
 	"name": "felis-major-website",
-	"homepage": "https://felis-major.github.io/felis-major-website/",
+	"homepage": "https://felis-major.github.io/",
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {

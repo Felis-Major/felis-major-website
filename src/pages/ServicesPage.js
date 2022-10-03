@@ -85,10 +85,10 @@ const ServicesPage = () => {
 									localizationKeys.servicesPage.pageSectionServices.cards[1]
 										.services[1]
 								),
-								Translate(
-									localizationKeys.servicesPage.pageSectionServices.cards[1]
-										.services[2]
-								),
+								// Translate(
+								// 	localizationKeys.servicesPage.pageSectionServices.cards[1]
+								// 		.services[2]
+								// ),
 							]}
 						/>
 						<ServiceCard
