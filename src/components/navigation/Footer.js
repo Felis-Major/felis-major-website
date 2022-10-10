@@ -22,7 +22,7 @@ const Footer = () => {
 		<footer className={footerClass}>
 			<div className={topSectionClass}>
 				<Links />
-				{/* <LanguageSelection /> */}
+				<LanguageSelection />
 			</div>
 			<div className={bottomSectionClass}>
 				<Copyright />

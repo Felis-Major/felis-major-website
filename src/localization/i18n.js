@@ -13,7 +13,7 @@ i18n.init({
 		en: { translation: translationEN },
 		fr: { translation: translationFR },
 	},
-	lng: 'fr',
+	lng: 'en',
 	fallbackLng: 'fr',
 	interpolation: { escapeValue: false },
 });

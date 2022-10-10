@@ -26,7 +26,7 @@ const ContactPage = () => {
 					<div className='container flex-centered flex-column'>
 						<p>{Translate(localizationKeys.contactPage.pageStatus)}</p>
 						<a href='https://twitter.com/felismajorrr'>
-							Contactez nous sur Twitter
+							{Translate(localizationKeys.contactUsOnTwitter)}
 						</a>
 					</div>
 				</section>

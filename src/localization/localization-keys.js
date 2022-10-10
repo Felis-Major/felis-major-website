@@ -1,4 +1,6 @@
 const localizationKeys = {
+	contactUsOnTwitter: 'contactUsOnTwitter',
+
 	// Nav links
 	navLinks: {
 		aboutUs: 'header_aboutUs',
