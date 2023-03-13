@@ -9,7 +9,7 @@ import TopBanner from '../imgs/banners/wastern.png';
 
 import ksp1 from '../imgs/ksps/ksp1.png';
 import ksp2 from '../imgs/ksps/ksp2.png';
-import ksp3 from '../imgs/ksps/ksp3.png';
+import ksp3 from '../imgs/ksps/ksp5.png';
 import ksp4 from '../imgs/ksps/ksp4.png';
 import ksp5 from '../imgs/ksps/ksp5.png';
 
@@ -47,17 +47,9 @@ const Pitch = () => {
 			<div className='container flex-centered flex-column'>
 				<div className='card-wide dark-background'>
 					<p>
-						<b>
-							{Translate(
-								localizationKeys.wasternPage.pageSectionPitch.pitchTitle
-							)}
-						</b>
+						<b>{Translate(localizationKeys.wasternPage.pageSectionPitch.pitchTitle)}</b>
 					</p>
-					<p>
-						{Translate(
-							localizationKeys.wasternPage.pageSectionPitch.pitchContent
-						)}
-					</p>
+					<p>{Translate(localizationKeys.wasternPage.pageSectionPitch.pitchContent)}</p>
 				</div>
 			</div>
 		</section>
@@ -67,49 +59,24 @@ const Pitch = () => {
 const KSPs = () => {
 	const ksps = [
 		{
-			title: Translate(
-				localizationKeys.wasternPage.pageSectionKSPs.ksps[0].title
-			),
-			content: Translate(
-				localizationKeys.wasternPage.pageSectionKSPs.ksps[0].content
-			),
+			title: Translate(localizationKeys.wasternPage.pageSectionKSPs.ksps[0].title),
+			content: Translate(localizationKeys.wasternPage.pageSectionKSPs.ksps[0].content),
 			imageUrl: ksp1,
 		},
 		{
-			title: Translate(
-				localizationKeys.wasternPage.pageSectionKSPs.ksps[1].title
-			),
-			content: Translate(
-				localizationKeys.wasternPage.pageSectionKSPs.ksps[1].content
-			),
+			title: Translate(localizationKeys.wasternPage.pageSectionKSPs.ksps[1].title),
+			content: Translate(localizationKeys.wasternPage.pageSectionKSPs.ksps[1].content),
 			imageUrl: ksp2,
 		},
 		{
-			title: Translate(
-				localizationKeys.wasternPage.pageSectionKSPs.ksps[2].title
-			),
-			content: Translate(
-				localizationKeys.wasternPage.pageSectionKSPs.ksps[2].content
-			),
+			title: Translate(localizationKeys.wasternPage.pageSectionKSPs.ksps[2].title),
+			content: Translate(localizationKeys.wasternPage.pageSectionKSPs.ksps[2].content),
 			imageUrl: ksp3,
 		},
 		{
-			title: Translate(
-				localizationKeys.wasternPage.pageSectionKSPs.ksps[3].title
-			),
-			content: Translate(
-				localizationKeys.wasternPage.pageSectionKSPs.ksps[3].content
-			),
+			title: Translate(localizationKeys.wasternPage.pageSectionKSPs.ksps[3].title),
+			content: Translate(localizationKeys.wasternPage.pageSectionKSPs.ksps[3].content),
 			imageUrl: ksp4,
-		},
-		{
-			title: Translate(
-				localizationKeys.wasternPage.pageSectionKSPs.ksps[4].title
-			),
-			content: Translate(
-				localizationKeys.wasternPage.pageSectionKSPs.ksps[4].content
-			),
-			imageUrl: ksp5,
 		},
 	];
 
@@ -118,11 +85,7 @@ const KSPs = () => {
 			{/* <h1>{Translate(localizationKeys.wasternPage.pageSectionKSPs.title)}</h1> */}
 			<div className='container flex-centered'>
 				{ksps.map((x, index) => (
-					<HorizontalCard
-						imageUrl={x.imageUrl}
-						align={index % 2 == 0 ? 'align-left' : 'align-right'}
-						key={index}
-					>
+					<HorizontalCard imageUrl={x.imageUrl} align={index % 2 == 0 ? 'align-left' : 'align-right'} key={index}>
 						<h2 style={{ textAlign: 'left' }}>{x.title}</h2>
 						<p>{x.content}</p>
 					</HorizontalCard>
@@ -135,52 +98,28 @@ const KSPs = () => {
 const FAQ = () => {
 	const questions = [
 		{
-			title: Translate(
-				localizationKeys.wasternPage.pageSectionFAQ.questions[0].title
-			),
-			content: Translate(
-				localizationKeys.wasternPage.pageSectionFAQ.questions[0].content
-			),
+			title: Translate(localizationKeys.wasternPage.pageSectionFAQ.questions[0].title),
+			content: Translate(localizationKeys.wasternPage.pageSectionFAQ.questions[0].content),
 		},
 		{
-			title: Translate(
-				localizationKeys.wasternPage.pageSectionFAQ.questions[1].title
-			),
-			content: Translate(
-				localizationKeys.wasternPage.pageSectionFAQ.questions[1].content
-			),
+			title: Translate(localizationKeys.wasternPage.pageSectionFAQ.questions[1].title),
+			content: Translate(localizationKeys.wasternPage.pageSectionFAQ.questions[1].content),
 		},
 		{
-			title: Translate(
-				localizationKeys.wasternPage.pageSectionFAQ.questions[2].title
-			),
-			content: Translate(
-				localizationKeys.wasternPage.pageSectionFAQ.questions[2].content
-			),
+			title: Translate(localizationKeys.wasternPage.pageSectionFAQ.questions[2].title),
+			content: Translate(localizationKeys.wasternPage.pageSectionFAQ.questions[2].content),
 		},
 		{
-			title: Translate(
-				localizationKeys.wasternPage.pageSectionFAQ.questions[3].title
-			),
-			content: Translate(
-				localizationKeys.wasternPage.pageSectionFAQ.questions[3].content
-			),
+			title: Translate(localizationKeys.wasternPage.pageSectionFAQ.questions[3].title),
+			content: Translate(localizationKeys.wasternPage.pageSectionFAQ.questions[3].content),
 		},
 		{
-			title: Translate(
-				localizationKeys.wasternPage.pageSectionFAQ.questions[4].title
-			),
-			content: Translate(
-				localizationKeys.wasternPage.pageSectionFAQ.questions[4].content
-			),
+			title: Translate(localizationKeys.wasternPage.pageSectionFAQ.questions[4].title),
+			content: Translate(localizationKeys.wasternPage.pageSectionFAQ.questions[4].content),
 		},
 		{
-			title: Translate(
-				localizationKeys.wasternPage.pageSectionFAQ.questions[5].title
-			),
-			content: Translate(
-				localizationKeys.wasternPage.pageSectionFAQ.questions[5].content
-			),
+			title: Translate(localizationKeys.wasternPage.pageSectionFAQ.questions[5].title),
+			content: Translate(localizationKeys.wasternPage.pageSectionFAQ.questions[5].content),
 		},
 	];
 
