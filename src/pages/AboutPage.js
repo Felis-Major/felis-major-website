@@ -18,53 +18,7 @@ const AboutPage = () => {
 	scrollToTop();
 	return (
 		<>
-			<Header />
-
-			<div className='content about'>
-				<PageHeader
-					title={Translate(localizationKeys.aboutPage.pageTitle)}
-					// subtitle={Translate(localizationKeys.aboutPage.pageSubtitle)}
-					imageUrl={TopBanner}
-				/>
-
-				<section className='page-content'>
-					<div className='container flex-centered'>
-						<div className='card-wide light-background'>
-							<p>
-								{Translate(localizationKeys.aboutPage.pageSectionIntro.content)}
-							</p>
-						</div>
-					</div>
-				</section>
-
-				<TeamCards />
-
-				<section className='page-content'>
-					<h1>
-						{Translate(localizationKeys.aboutPage.pageSectionValues.title)}
-					</h1>
-					<div className='container flex-centered'>
-						<div className='card-wide light-background'>
-							<p>
-								{Translate(
-									localizationKeys.aboutPage.pageSectionValues.content
-								)}
-							</p>
-						</div>
-					</div>
-				</section>
-
-				<section className='page-content'>
-					<h1>
-						{Translate(localizationKeys.aboutPage.pageSectionTwitterFeed.title)}
-					</h1>
-					<div className='container flex-centered'>
-						<Twitter width='700' handle='felismajorrr' />
-					</div>
-				</section>
-			</div>
-
-			<Footer />
+			<h1>Currently in development</h1>
 		</>
 	);
 };
